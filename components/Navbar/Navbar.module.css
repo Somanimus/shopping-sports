@@ -1,0 +1,49 @@
+.nav_container {
+    max-width: 1075px;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_logo {
+    width: 132px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer !important;
+}
+
+.nav_logo > span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav_list {
+    display: flex;
+    list-style-type: none;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+    width: 455px;
+}
+
+.basket_icon{
+    position: relative;
+}
+
+.basket_length{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #f00;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

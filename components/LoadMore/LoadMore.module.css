@@ -1,0 +1,25 @@
+.more_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.more {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    width: 183px;
+    height: 42px;
+    background: #bdbdbd;
+    border-radius: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    cursor: pointer;
+}

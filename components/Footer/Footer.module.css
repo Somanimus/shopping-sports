@@ -1,0 +1,25 @@
+.footer_container {
+    max-width: 1075px;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_ul {
+    list-style-type: none;
+    font-weight: lighter;
+    line-height: 1.7;
+}
+
+.footer_ul > li:hover {
+    list-style-type: none;
+    font-weight: normal;
+    transition: 1;
+}
+
+.footer_soc {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
