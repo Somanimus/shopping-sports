@@ -12,6 +12,7 @@ const Layout = ({ title, children }) => {
                     name='viewport'
                     content='initial-scale=1.0, width=device-width'
                 />
+                <meta name="yandex-verification" content="fe62b413368bcce2" />
             </Head>
             <Navbar />
             <hr />

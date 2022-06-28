@@ -1,33 +1,65 @@
-import React, {useEffect} from 'react';
-import Layout from '../../../../components/Layout/Layout';
-import {useDispatch, useSelector} from "react-redux";
-import {getSubCategories} from "../../../../redux/action/subCategoriesAction";
+import React, { useEffect } from "react";
+import Layout from "../../../../components/Layout/Layout";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    getSubCategories,
+    getSubCategoriesDetail,
+} from "../../../../redux/action/subCategoriesAction";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { BestCardCatalog } from "../../../../components/catalog/catalog";
+import styles from "./styles.module.css";
 
 const SubCategory = () => {
-    const { subCategories } = useSelector(state => state.subCategories)
-    const dispatch = useDispatch()
+    const { subCategories, subCategoriesDetail } = useSelector(
+        (state) => state.subCategories
+    );
+    const dispatch = useDispatch();
+    const query = useRouter();
 
     useEffect(() => {
-        dispatch(getSubCategories())
-    }, [])
+        if (query.query.subcategory) {
+            dispatch(getSubCategoriesDetail(+query.query.subcategory));
+        }
+    }, [query.query.subcategory]);
+
+    useEffect(() => {
+        dispatch(getSubCategories());
+    }, []);
 
     return (
-        <Layout title='id'>
-            {subCategories?.map((item) => (
-                <div key={item.id}>
-                    <div>{item.name}</div>
+        <Layout title="id">
+            <div className={styles.content}>
+                <div>
                     <Image
-                        id='img'
-                        src={item.image}
-                        alt='image'
-                        width={500}
-                        height={500}
-                        loader={() => item.image}
+                        loader={() => subCategoriesDetail.image}
+                        src={subCategoriesDetail.image ? subCategoriesDetail.image : "./kreslo.png"}
+                        alt=""
+                        width={450}
+                        height={300}
+                        objectFit="cover"
                         unoptimized
                     />
                 </div>
-            ))}
+                <div>
+                    <p>{subCategoriesDetail.name}</p>
+                </div>
+            </div>
+            <h3 className={styles.h3}>Все категорий</h3>
+            <div className={styles.bestCardCatalog}>
+                {subCategories?.map((item) => (
+                    <Link
+                        href="/catalog/[category]/[subcategory]"
+                        as={`/catalog/[category]/${item.id}`}
+                        key={item.id}
+                    >
+                        <a>
+                            <BestCardCatalog content={item} />
+                        </a>
+                    </Link>
+                ))}
+            </div>
         </Layout>
     );
 };

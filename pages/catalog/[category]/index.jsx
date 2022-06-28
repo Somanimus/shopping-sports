@@ -5,57 +5,53 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategoriesDetail } from "../../../redux/action/categoriesAction";
+import { BestCardCatalog } from "../../../components/catalog/catalog";
+import styles from "./category.module.css"
 
-const Subcategory = ({ title }) => {
+const Subcategory = () => {
     const { categoriesDetail } = useSelector((state) => state.categories);
     const query = useRouter();
     const dispatch = useDispatch();
 
-    console.log(query)
-
     useEffect(() => {
         if(query.query.category){
-            console.log(query.query.category)
             dispatch(getCategoriesDetail(+query.query.category))
         }
     }, [query.query.category])
 
     return (
-        <Layout title={title}>
-            {categoriesDetail?.sub_categories?.map((item) => (
-                <div key={item.name}>
-                    <Link
-                        href='/catalog/[category]/[subcategory]'
-                        as={`${query.asPath}/${item.name}${item.id}`}
-                    >
-                        <a>
-                            <div>{item.name}</div>
-                            <Image
-                                id='img'
-                                src={item.image}
-                                alt='image'
-                                width={500}
-                                height={500}
-                                loader={() => item.image}
-                                unoptimized
-                            />
-                        </a>
-                    </Link>
+        <Layout title={categoriesDetail.name}>
+            <div className={styles.content}>
+                <div>
+                    <Image 
+                        loader={() => categoriesDetail.image}
+                        src={categoriesDetail?.image ? categoriesDetail?.image : "./kreslo.png"}
+                        alt=""
+                        width={450}
+                        height={300}
+                        objectFit="cover"
+                        unoptimized
+                    />
                 </div>
-            ))}
+                <div>
+                    <p>{categoriesDetail.name}</p>
+                </div>
+            </div>
+            <div className={styles.container}>
+                {categoriesDetail?.sub_categories?.map((item) => (
+                        <Link
+                            href='/catalog/[category]/[subcategory]'
+                            as={`${query.asPath}/${item.id}`}
+                            key={item.id}
+                        >
+                            <a>
+                                <BestCardCatalog content={item} />
+                            </a>
+                        </Link>
+                ))}
+            </div>
         </Layout>
     );
 };
 
 export default Subcategory;
-
-// export async function getServerSideProps({ query }) {
-//     const strValue = query.category;
-//     const title = strValue.slice(0, -1);
-//     const id = strValue.slice(-1);
-//     const res = await fetch(
-//         `http://212.42.103.101:8920/subcategory/?category=${id}`
-//     );
-//     const subcategories = await res.json();
-//     return { props: { title, subcategories, id } };
-// }

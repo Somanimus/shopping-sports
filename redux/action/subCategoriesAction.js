@@ -10,6 +10,7 @@ const errorSubCotegories = (error) => ({
     type: types.ERROR_SUB_CATEGORIES,
     error,
 });
+const getSubCategoriesDetailSuccess = (payload) => ({type: types.GET_SUB_CATEGORIES_DETAIL, payload})
 
 export const getSubCategories = () => {
     return async (dispatch) => {
@@ -21,3 +22,12 @@ export const getSubCategories = () => {
         }
     };
 };
+
+export const getSubCategoriesDetail = id => async dispatch => {
+    try{
+        const res = await axios.get(`${API_URL}/sub_categories/${id}`)
+        dispatch(getSubCategoriesDetailSuccess(res.data))
+    }catch(e) {
+        console.log(e)
+    }
+}
