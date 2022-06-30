@@ -1,7 +1,6 @@
 .hero {
     display: flex;
     justify-content: flex-start;
-    height: 600px;
     padding: 130px 0;
 }
 
@@ -17,7 +16,6 @@
 .hero_left {
     height: 100%;
     width: 55%;
-    margin-left: 180px;
 }
 
 .hero_left > p {
@@ -65,4 +63,11 @@
     border-radius: 10px;
     outline: none;
     margin-left: 20px;
+}
+
+.hero_right{
+    position: absolute;
+    right: 0;
+    width: calc(700 / 1920 * 100vw);
+    height: calc(450 / 1920 * 100vw);
 }

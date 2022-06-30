@@ -7,7 +7,7 @@ const Layout = ({ title, children }) => {
     return (
         <>
             <Head>
-                <title>{title} | Courpus.kg</title>
+                <title>{title} | Corpus.kg</title>
                 <meta
                     name='viewport'
                     content='initial-scale=1.0, width=device-width'

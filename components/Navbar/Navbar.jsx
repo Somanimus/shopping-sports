@@ -8,7 +8,7 @@ const Navbar = () => {
     const { basket } = useSelector(state => state.basket)
     return (
         <header>
-            <nav className={styles.nav_container}>
+            <nav className={`container ${styles.nav}`}>
                 <Link href='/'>
                     <a>
                         <div className={styles.nav_logo}>

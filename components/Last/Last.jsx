@@ -61,7 +61,7 @@ const Last = ({product}) => {
 
     return (
         <div className='gray_bg'>
-            <div className={styles.best_container}>
+            <div className="container">
                 <h2>Последние поступления</h2>
                 <div className={styles.best_card_wrapper}>
                     {

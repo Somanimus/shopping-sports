@@ -65,7 +65,7 @@ export const BestCard = ({new_is, content}) => {
 const Best = ({productsHit}) => {
     return (
         <div className='gray_bg'>
-            <div className={styles.best_container}>
+            <div className="container">
                 <h2>Лучшие товары</h2>
                 <div className={styles.best_card_wrapper}>
                     {

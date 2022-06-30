@@ -46,7 +46,7 @@ const ProductsDetail = ({ productsDetail }) => {
         prevArrow: <SamplePrevArrow />
     }
     return (
-        <div className={styles.container}>
+        <div className="container">
             <div className={styles.slider}>
                 <Slider {...settings}>
                     <div>
@@ -164,13 +164,15 @@ const ProductsDetail = ({ productsDetail }) => {
             <div>
                 <div className={styles.name}>
                     <h2>{productsDetail.name}</h2>
-                    <div className={styles.sale}>
+                    
                         {
                             productsDetail.sale && (
-                                <div>{productsDetail.discount}%</div>
+                                <div className={styles.sale}>
+                                    <div>{productsDetail.discount}%</div>
+                                </div>
                             )
                         }
-                    </div>
+                    
                 </div>
 
                 <div>Под котегория: {productsDetail.subcategory}</div>

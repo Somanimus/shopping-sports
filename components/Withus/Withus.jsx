@@ -53,7 +53,7 @@ const Card4 = () => {
 export default function WithUs() {
     return (
         <div className='gray_bg'>
-            <div className={styles.withus_container}>
+            <div className="container">
                 <h2>С Нами</h2>
                 <div className={styles.card_wrapper}>
                     <Card />

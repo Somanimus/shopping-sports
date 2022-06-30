@@ -37,7 +37,7 @@ const Subcategory = () => {
                     <p>{categoriesDetail.name}</p>
                 </div>
             </div>
-            <div className={styles.container}>
+            <div className="container">
                 {categoriesDetail?.sub_categories?.map((item) => (
                         <Link
                             href='/catalog/[category]/[subcategory]'

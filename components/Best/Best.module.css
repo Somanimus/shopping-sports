@@ -26,6 +26,12 @@
     width: 100%;
 }
 
+@media (max-width: 770px) {
+    .best_card_wrapper {
+        grid-template-columns: 100%;
+    }
+}
+
 .best_card_new {
     padding: 8px 12px;
     background: #219653;

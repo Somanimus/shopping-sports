@@ -41,7 +41,7 @@ const New = ({productsNew}) => {
     }
     return (
         <div className='gray_bg'>
-            <div className={styles.new_container}>
+            <div className="container">
                 <h2>Новинки</h2>
                 <div className={styles.new_card_wrapper}>
                     {
