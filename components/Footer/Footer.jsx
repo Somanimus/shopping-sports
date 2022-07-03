@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className={styles.footer_container}>
+            <div className={"container " + styles.footer_bottom}>
                 <div className={styles.footer_soc}>
                     <Image
                         src='/instagram.svg'

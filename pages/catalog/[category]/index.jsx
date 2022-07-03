@@ -21,7 +21,7 @@ const Subcategory = () => {
 
     return (
         <Layout title={categoriesDetail.name}>
-            <div className={styles.content}>
+            <div className={styles.content + " container"}>
                 <div>
                     <Image 
                         loader={() => categoriesDetail.image}
@@ -37,7 +37,7 @@ const Subcategory = () => {
                     <p>{categoriesDetail.name}</p>
                 </div>
             </div>
-            <div className="container">
+            <div className={"container " + styles.best_card_wrapper}>
                 {categoriesDetail?.sub_categories?.map((item) => (
                         <Link
                             href='/catalog/[category]/[subcategory]'

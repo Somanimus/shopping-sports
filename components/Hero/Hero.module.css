@@ -26,6 +26,7 @@
     display: flex;
     margin-top: 80px;
     position: relative;
+    align-items: center;
 }
 .modalInput{
     position: absolute;
@@ -43,11 +44,22 @@
 }
 
 .hero_input {
-    width: 380px;
-    height: 58px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
     border: 2px solid #bdbdbd;
     border-radius: 10px;
-
+    display: flex;
+    align-items: center;
+}
+.hero_input input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+.hero_input svg{
+    fill: #bdbdbd;
 }
 
 .hero_btn {
@@ -70,4 +82,81 @@
     right: 0;
     width: calc(700 / 1920 * 100vw);
     height: calc(450 / 1920 * 100vw);
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero_left{
+        width: 100%;
+    }
+    .modalInput{
+        width: 100%;
+    }
+    .hero_input {
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
+        border: 2px solid #bdbdbd;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .hero_input input {
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        outline: none;
+    }
+    .hero_input svg{
+        fill: #bdbdbd;
+    }
+    
+    .hero_btn {
+        display: none;
+    }
+    .hero_right{
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero_left{
+        width: 100%;
+    }
+    .hero_h1 {
+        font-size: 50px;
+    }
+    .modalInput{
+        width: 100%;
+    }
+    .hero_input {
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
+        border: 2px solid #bdbdbd;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .hero_input input {
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        outline: none;
+    }
+    .hero_input svg{
+        fill: #bdbdbd;
+    }
+    
+    .hero_btn {
+        display: none;
+    }
+    .hero_right{
+        display: none;
+    }
 }

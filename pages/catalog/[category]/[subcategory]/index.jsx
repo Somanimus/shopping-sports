@@ -10,17 +10,21 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { BestCardCatalog } from "../../../../components/catalog/catalog";
 import styles from "./styles.module.css";
+import { getProducts } from "../../../../redux/action/productsAction";
+import { BestCard } from "../../../../components/Best/Best";
 
 const SubCategory = () => {
     const { subCategories, subCategoriesDetail } = useSelector(
         (state) => state.subCategories
     );
+    const { products } = useSelector(state => state.products)
     const dispatch = useDispatch();
     const query = useRouter();
-
+    console.log(products)
     useEffect(() => {
         if (query.query.subcategory) {
             dispatch(getSubCategoriesDetail(+query.query.subcategory));
+            dispatch(getProducts(false, false, 20, false))
         }
     }, [query.query.subcategory]);
 
@@ -30,11 +34,15 @@ const SubCategory = () => {
 
     return (
         <Layout title="id">
-            <div className={styles.content}>
+            <div className={styles.content + " container"}>
                 <div>
                     <Image
                         loader={() => subCategoriesDetail.image}
-                        src={subCategoriesDetail.image ? subCategoriesDetail.image : "./kreslo.png"}
+                        src={
+                            subCategoriesDetail.image
+                                ? subCategoriesDetail.image
+                                : "./kreslo.png"
+                        }
                         alt=""
                         width={450}
                         height={300}
@@ -46,33 +54,41 @@ const SubCategory = () => {
                     <p>{subCategoriesDetail.name}</p>
                 </div>
             </div>
-            <h3 className={styles.h3}>Все категорий</h3>
-            <div className={styles.bestCardCatalog}>
-                {subCategories?.map((item) => (
-                    <Link
-                        href="/catalog/[category]/[subcategory]"
-                        as={`/catalog/[category]/${item.id}`}
-                        key={item.id}
-                    >
-                        <a>
-                            <BestCardCatalog content={item} />
-                        </a>
-                    </Link>
-                ))}
+            <div className="container">
+                <div className={styles.best_card_wrapper}>
+                {
+                    products?.results?.filter(item => item.subcategory === subCategoriesDetail.name).map((item) => (
+                        <Link
+                            href="/[id]"
+                            as={`/${item.id}`}
+                            key={item.id}
+                        >
+                            <a style={{cursor: "auto"}}>
+                                <BestCardCatalog content={item} />
+                            </a>
+                        </Link>
+                    ))
+                }
+                </div>
+            </div>
+            <div className="container">
+                <h3 className={styles.h3}>Все категорий</h3>
+                <div className={styles.best_card_wrapper}>
+                    {subCategories?.map((item) => (
+                        <Link
+                            href="/catalog/[category]/[subcategory]"
+                            as={`/catalog/[category]/${item.id}`}
+                            key={item.id}
+                        >
+                            <a>
+                                <BestCardCatalog content={item} />
+                            </a>
+                        </Link>
+                    ))}
+                </div>
             </div>
         </Layout>
     );
 };
 
 export default SubCategory;
-
-// export async function getServerSideProps({ query }) {
-//     const strValue = query.category;
-//     const title = strValue.slice(0, -1);
-//     const id = strValue.slice(-1);
-//     const res = await fetch(
-//         `http://212.42.103.101:8920/subcategory/?category=${id}`
-//     );
-//     const subcategories = await res.json();
-//     return { props: { title, subcategories } };
-// }
