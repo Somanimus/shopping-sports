@@ -4,7 +4,7 @@ import Catalog from '../../components/catalog/catalog';
 import Layout from '../../components/Layout/Layout';
 import { getCotegories } from '../../redux/action/categoriesAction';
 
-const index = () => {
+const Cataloge = () => {
     const { categories } = useSelector((state) => state.categories)
     const dispatch = useDispatch()
     useEffect(() => {
@@ -15,7 +15,7 @@ const index = () => {
     </Layout>;
 };
 
-export default index;
+export default Cataloge;
 
 
 
