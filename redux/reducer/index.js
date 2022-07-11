@@ -7,6 +7,7 @@ import { productReducer } from "./productsReducer";
 import { setsReducer } from "./setsReducer";
 import { subCategoriesReducer } from "./subCategoriesReducer";
 import {basketReducer} from "./basketReducer";
+import {goodCreditReducer} from "./goodCreaditReducer";
 
 const reducer = combineReducers({
     products: productReducer,
@@ -16,7 +17,8 @@ const reducer = combineReducers({
     order: orderReducer,
     fabrics: fabricsReducer,
     colors: colorsReducer,
-    basket: basketReducer
+    basket: basketReducer,
+    goodCredit: goodCreditReducer
 })
 
 

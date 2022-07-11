@@ -1,18 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './Footer.module.css';
 
 import Image from 'next/image';
+import {useDispatch, useSelector} from "react-redux";
+import {getCotegories} from "../../redux/action/categoriesAction";
+import Link from "next/link";
 
 const Footer = () => {
+    const { categories } = useSelector(state => state.categories)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getCotegories())
+    }, [])
+    console.log(categories)
     return (
         <footer>
             <div className={"container " + styles.footer}>
                 <div>
                     <ul className={styles.footer_ul}>
-                        <li>Информация</li>
-                        <li>О магазине</li>
+                        <li>О нас</li>
                         <li>Контакты</li>
-                        <li>Товары в кредит</li>
+                        <Link href={"/goodCreadit"}>
+                            <a><li>Товары в кредит</li></a>
+                        </Link>
                         <li>Акции</li>
                         <li>Гарантия</li>
                         <li>Политика конфиденциальности</li>
@@ -24,12 +34,15 @@ const Footer = () => {
                 <div>
                     <ul className={styles.footer_ul}>
                         <li>Каталог</li>
-                        <li>Диваны</li>
-                        <li>Кровати</li>
-                        <li>Кресла</li>
-                        <li>Стулья</li>
-                        <li>Пуфы</li>
-                        <li>Декор</li>
+                        {
+                            categories?.map((item, idx) => (
+                                <Link key={item.id} href="/catalog/[id]" as={`/catalog/${item.id}`}>
+                                    <a>
+                                        <li>{item.name}</li>
+                                    </a>
+                                </Link>
+                            ))
+                        }
                     </ul>
                 </div>
                 <div>

@@ -29,7 +29,7 @@
     line-height: 1.7;
 }
 
-.footer_ul > li:hover {
+.footer_ul li:hover {
     list-style-type: none;
     font-weight: normal;
     transition: 1;
