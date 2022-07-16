@@ -19,15 +19,11 @@ const Footer = () => {
                 <div>
                     <ul className={styles.footer_ul}>
                         <li>О нас</li>
-                        <li>Контакты</li>
                         <Link href={"/goodCreadit"}>
                             <a><li>Товары в кредит</li></a>
                         </Link>
                         <li>Акции</li>
                         <li>Гарантия</li>
-                        <li>Политика конфиденциальности</li>
-                        <li>Оферта</li>
-                        <li>Связаться с нами</li>
                     </ul>
                 </div>
 

@@ -35,9 +35,10 @@ export const BestCard = ({new_is, content}) => {
                             <Image
                                 src={content.image}
                                 alt=''
-                                width={208}
+                                width={"100%"}
                                 height={260}
                                 loader={() => content.image}
+                                layout="responsive"
                                 objectFit={"cover"}
                                 unoptimized
                             />

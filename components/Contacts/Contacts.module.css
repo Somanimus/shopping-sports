@@ -1,13 +1,19 @@
-.contacts_container{
-    max-width: 1090px;
-    
-    margin: 0 auto;
-    display: flex;
-}
+
 
 .contacts_left{
-    margin-right: 150px;
     margin-top: 60px;
+}
+
+.iframe{
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 60px;
+    height: 300px;
+}
+
+.iframe iframe{
+    width: 100%;
+    height: 100%;
 }
 
 .contacts_right{

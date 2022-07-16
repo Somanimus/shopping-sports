@@ -69,10 +69,10 @@
 }
 
 .image_wrapper {
-    margin: 5px auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 208px;
+    height: 260px;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .line {
