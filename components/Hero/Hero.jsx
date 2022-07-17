@@ -11,7 +11,6 @@ const Hero = () => {
     );
     const [state, setState] = useState("");
     const dispatch = useDispatch();
-    console.log(searchValue);
     const onChangeValue = (e) => {
         setState(e.target.value);
     };
@@ -19,7 +18,6 @@ const Hero = () => {
         dispatch(getProducts(false, false, false, state.replace(/ /gi, "+")));
     }, [state]);
     const clickSearch = () => {
-        console.log(state);
         dispatch(getProducts(false, false, false, state.replace(/ /gi, "+")));
     };
     return (

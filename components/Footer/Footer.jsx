@@ -12,7 +12,6 @@ const Footer = () => {
     useEffect(() => {
         dispatch(getCotegories())
     }, [])
-    console.log(categories)
     return (
         <footer>
             <div className={"container " + styles.footer}>
