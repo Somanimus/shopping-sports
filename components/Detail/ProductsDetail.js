@@ -1,9 +1,9 @@
-import React from 'react';
-import styles from "./detail.module.css"
-import Slider from "react-slick"
+import React from "react";
+import styles from "./detail.module.css";
+import Slider from "react-slick";
 import Image from "next/image";
-import {useDispatch, useSelector} from "react-redux";
-import {addBasket, basketAction} from "../../redux/action/basketAction";
+import { useDispatch, useSelector } from "react-redux";
+import { addBasket, basketAction } from "../../redux/action/basketAction";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -28,13 +28,13 @@ function SamplePrevArrow(props) {
 }
 
 const ProductsDetail = ({ productsDetail }) => {
-    const { basket } = useSelector(state => state.basket)
-    const dispatch = useDispatch()
+    const { basket } = useSelector((state) => state.basket);
+    const dispatch = useDispatch();
 
     function onClickButton(e) {
-        e.preventDefault()
-        addBasket(productsDetail.id)
-        dispatch(basketAction())
+        e.preventDefault();
+        addBasket(productsDetail.id);
+        dispatch(basketAction());
     }
     const settings = {
         dots: true,
@@ -43,148 +43,145 @@ const ProductsDetail = ({ productsDetail }) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
-    }
+        prevArrow: <SamplePrevArrow />,
+    };
     return (
         <div className="container">
-            <div className={styles.slider}>
-                <Slider {...settings}>
-                    <div>
-                        {
-                            productsDetail.image && (
+            <div className={styles.content}>
+                <div className={styles.slider}>
+                    <Slider {...settings}>
+                        <div>
+                            {productsDetail.image && (
                                 <Image
                                     loader={() => productsDetail.image}
                                     src={productsDetail.image}
-                                    objectFit={"cover"}
+                                    objectFit={"contain"}
                                     alt=""
                                     width={600}
                                     height={600}
                                     unoptimized
                                 />
-                            )
-                        }
-                    </div>
-                    {
-                        productsDetail.image2 && (
+                            )}
+                        </div>
+                        {productsDetail.image2 && (
                             <div>
-                                {
-                                    productsDetail.image2 && (
-                                        <Image
-                                            loader={() => productsDetail.image2}
-                                            src={productsDetail.image2}
-                                            objectFit={"cover"}
-                                            alt=""
-                                            width={600}
-                                            height={600}
-                                            unoptimized
-                                        />
-                                    )
-                                }
+                                {productsDetail.image2 && (
+                                    <Image
+                                        loader={() => productsDetail.image2}
+                                        src={productsDetail.image2}
+                                        objectFit={"contain"}
+                                        alt=""
+                                        width={600}
+                                        height={600}
+                                        unoptimized
+                                    />
+                                )}
                             </div>
-                        )
-                    }
-                    {
-                        productsDetail.image3 && (
+                        )}
+                        {productsDetail.image3 && (
                             <div>
-                                {
-                                    productsDetail.image3 && (
-                                        <Image
-                                            loader={() => productsDetail.image3}
-                                            src={productsDetail.image3}
-                                            objectFit={"cover"}
-                                            alt=""
-                                            width={600}
-                                            height={600}
-                                            unoptimized
-                                        />
-                                    )
-                                }
+                                {productsDetail.image3 && (
+                                    <Image
+                                        loader={() => productsDetail.image3}
+                                        src={productsDetail.image3}
+                                        objectFit={"contain"}
+                                        alt=""
+                                        width={600}
+                                        height={600}
+                                        unoptimized
+                                    />
+                                )}
                             </div>
-                        )
-                    }
-                    {
-                        productsDetail.image4 && (
+                        )}
+                        {productsDetail.image4 && (
                             <div>
-                                {
-                                    productsDetail.image4 && (
-                                        <Image
-                                            loader={() => productsDetail.image4}
-                                            src={productsDetail.image4}
-                                            objectFit={"cover"}
-                                            alt=""
-                                            width={600}
-                                            height={600}
-                                            unoptimized
-                                        />
-                                    )
-                                }
+                                {productsDetail.image4 && (
+                                    <Image
+                                        loader={() => productsDetail.image4}
+                                        src={productsDetail.image4}
+                                        objectFit={"contain"}
+                                        alt=""
+                                        width={600}
+                                        height={600}
+                                        unoptimized
+                                    />
+                                )}
                             </div>
-                        )
-                    }
-                    {
-                        productsDetail.image5 && (
+                        )}
+                        {productsDetail.image5 && (
                             <div>
-                                {
-                                    productsDetail.image5 && (
-                                        <Image
-                                            loader={() => productsDetail.image5}
-                                            src={productsDetail.image5}
-                                            objectFit={"cover"}
-                                            alt=""
-                                            width={600}
-                                            height={600}
-                                            unoptimized
-                                        />
-                                    )
-                                }
+                                {productsDetail.image5 && (
+                                    <Image
+                                        loader={() => productsDetail.image5}
+                                        src={productsDetail.image5}
+                                        objectFit={"contain"}
+                                        alt=""
+                                        width={600}
+                                        height={600}
+                                        unoptimized
+                                    />
+                                )}
                             </div>
-                        )
-                    }
-                    {
-                        productsDetail.image6 && (
+                        )}
+                        {productsDetail.image6 && (
                             <div>
-                                {
-                                    productsDetail.image6 && (
-                                        <Image
-                                            loader={() => productsDetail.image6}
-                                            src={productsDetail.image6}
-                                            objectFit={"cover"}
-                                            alt=""
-                                            width={600}
-                                            height={600}
-                                            unoptimized
-                                        />
-                                    )
-                                }
+                                {productsDetail.image6 && (
+                                    <Image
+                                        loader={() => productsDetail.image6}
+                                        src={productsDetail.image6}
+                                        objectFit={"contain"}
+                                        alt=""
+                                        width={600}
+                                        height={600}
+                                        unoptimized
+                                    />
+                                )}
                             </div>
-                        )
-                    }
-                </Slider>
-            </div>
-            <div>
-                <div className={styles.name}>
-                    <h2>{productsDetail.name}</h2>
-                    
-                        {
-                            productsDetail.sale && (
-                                <div className={styles.sale}>
-                                    <div>{productsDetail.discount}%</div>
-                                </div>
-                            )
-                        }
-                    
+                        )}
+                    </Slider>
                 </div>
-
-                <div>Под котегория: {productsDetail.subcategory}</div>
-                <div>Комплектация: {productsDetail.prod_set}</div>
-                <div>Цвет: {productsDetail.color}</div>
                 <div>
-                    Описание: {productsDetail.description}
-                </div>
-                <div className={styles.btn_card_price}>
-                    <div className={styles.price}>Цена: <span className={productsDetail.sale ? styles.dis_price : ""}>{productsDetail.price && productsDetail.price.replace(/\..*/, '')} сом</span> {productsDetail.sale && (<span>{productsDetail.discount_price} сом</span>)}</div>
-                    <div className={styles.best_card_btn} onClick={onClickButton}>
-                        { basket.indexOf(productsDetail.id) !== -1 ? "Удалить из корзины" : "В корзину" }
+                    <div className={styles.name}>
+                        <h2>{productsDetail.name}</h2>
+
+                        {productsDetail.sale && (
+                            <div className={styles.sale}>
+                                <div>{productsDetail.discount}%</div>
+                            </div>
+                        )}
+                    </div>
+
+                    <div><strong>Под котегория:</strong> {productsDetail.subcategory}</div>
+                    <div><strong>Комплектация:</strong> {productsDetail.prod_set}</div>
+                    <div><strong>Цвет:</strong> {productsDetail.color}</div>
+                    <div><strong>Описание:</strong> {productsDetail.description}</div>
+                    <div className={styles.btn_card_price}>
+                        <div className={styles.price}>
+                            <strong>Цена:</strong>{" "}
+                            <span
+                                className={
+                                    productsDetail.sale ? styles.dis_price : ""
+                                }
+                            >
+                                {productsDetail.price &&
+                                    productsDetail.price.replace(
+                                        /\..*/,
+                                        ""
+                                    )}{" "}
+                                сом
+                            </span>{" "}
+                            {productsDetail.sale && (
+                                <span>{productsDetail.discount_price} сом</span>
+                            )}
+                        </div>
+                        <div
+                            className={styles.best_card_btn}
+                            onClick={onClickButton}
+                        >
+                            {basket.indexOf(productsDetail.id) !== -1
+                                ? "Удалить из корзины"
+                                : "В корзину"}
+                        </div>
                     </div>
                 </div>
             </div>

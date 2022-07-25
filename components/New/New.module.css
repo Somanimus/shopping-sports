@@ -46,8 +46,23 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
-
     color: #000000;
+    overflow: hidden;
+	position: relative;
+	height: 62px;
+    display: block;
+}
+
+.new_card_descr:after {
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 70%;
+	height: 1.2em;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), white 100%);
+	pointer-events: none;
 }
 
 .new_card_btn {

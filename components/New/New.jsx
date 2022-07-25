@@ -30,7 +30,7 @@ const NewCard = ({ newContent }) => {
           alt="sofa img"
           width={470}
           height={350}
-          objectFit={"cover"}
+          objectFit={"contain"}
           unoptimized
         />
       </div>

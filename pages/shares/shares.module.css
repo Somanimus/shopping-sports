@@ -1,0 +1,25 @@
+.best_card_wrapper {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-column-gap: 0.5%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media (max-width: 1024px) {
+    .best_card_wrapper {
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 2%;
+    }
+}
+
+@media (max-width: 770px) {
+    .best_card_wrapper {
+        grid-template-columns: 100%;
+    }
+}
+
+.card_link{
+    width: 100%;
+    margin-top: 20px;
+}

@@ -16,6 +16,7 @@ const f = {
 }
 
 const Card = () => {
+    const [amount, setAmount] = useState(1)
     const { products } = useSelector((state) => state.products);
     const { basket } = useSelector((state) => state.basket);
     const dispatch = useDispatch();
@@ -25,10 +26,10 @@ const Card = () => {
         dispatch(basketAction());
     }, []);
 
-    console.log(products);
+    console.log(basket)
 
-    const formChange = (ev) => {
-        
+    const formChange = (e) => {
+        e.preventDefault()
     } 
 
     return (
@@ -40,7 +41,7 @@ const Card = () => {
                         .map((item, idx) => {
                             return (
                                 <div key={item.id}>
-                                    <BestCard content={item} new_is={false} />
+                                    <BestCard content={item} new_is={false} count={amount} setCount={setAmount} />
                                 </div>
                             );
                         })

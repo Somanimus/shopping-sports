@@ -1,34 +1,33 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Layout from "../../components/Layout/Layout";
-import { getGoodCredit } from '../../redux/action/goodCreaditAction';
-import * as styles from "./goodCredit.module.css"
+import { getShares } from "../../redux/action/sharesAction";
+import * as styles from "./shares.module.css"
 
-const GoodCredit = () => {
-    const {goodCredit} = useSelector(state => state.goodCredit)
+const Shares = () => {
+    const {shares} = useSelector(state => state.shares)
     const dispatch = useDispatch()
-    console.log(goodCredit)
     useEffect(() => {
-        dispatch(getGoodCredit())
+        dispatch(getShares())
     }, [])
     return (
         <Layout>
             <div className='container'>
-                <h2>Товары в кредит</h2>
+                <h2>Акций</h2>
                 <div className={styles.best_card_wrapper}>
                     {
-                        goodCredit?.results ? goodCredit?.results?.map((item, idx) => {
+                        shares?.results?.length ? shares?.results?.map((item, idx) => {
                             return (
                                 <div className={styles.card_link} key={idx}>
                                     <BestCard new_is={item ? item.is_new : false} content={item} />
                                 </div>
                             )
-                        }) : "покачто нету товаров в кредит"
+                        }) : "пока что нету товаров"
                     }
                 </div>
             </div>
         </Layout>
-    );
-};
+    )
+}
 
-export default GoodCredit;
+export default Shares
