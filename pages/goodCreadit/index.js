@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Layout from "../../components/Layout/Layout";
 import { getGoodCredit } from '../../redux/action/goodCreaditAction';
+import { BestCard } from '../../components/Best/Best';
 import * as styles from "./goodCredit.module.css"
 
 const GoodCredit = () => {
@@ -10,7 +11,7 @@ const GoodCredit = () => {
     console.log(goodCredit)
     useEffect(() => {
         dispatch(getGoodCredit())
-    }, [])
+    }, [dispatch])
     return (
         <Layout>
             <div className='container'>

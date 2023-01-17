@@ -26,11 +26,11 @@ const SubCategory = () => {
             dispatch(getSubCategoriesDetail(+query.query.subcategory));
             dispatch(getProducts(false, false, 20, false))
         }
-    }, [query.query.subcategory]);
+    }, [query.query.subcategory, dispatch]);
 
     useEffect(() => {
         dispatch(getSubCategories());
-    }, []);
+    }, [dispatch]);
 
     return (
         <Layout title="id">

@@ -9,7 +9,7 @@ const Cataloge = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getCotegories())
-    }, [])
+    }, [dispatch])
     return <Layout title='О нас'>
         <Catalog categories={categories} />
     </Layout>;

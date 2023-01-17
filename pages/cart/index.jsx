@@ -24,7 +24,7 @@ const Card = () => {
     useEffect(() => {
         dispatch(getProducts(false, false, 0));
         dispatch(basketAction());
-    }, []);
+    }, [dispatch]);
 
     console.log(basket)
 

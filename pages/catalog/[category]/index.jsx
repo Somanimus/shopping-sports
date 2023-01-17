@@ -17,7 +17,7 @@ const Subcategory = () => {
         if(query.query.category){
             dispatch(getCategoriesDetail(+query.query.category))
         }
-    }, [query.query.category])
+    }, [query.query.category, dispatch])
 
     return (
         <Layout title={categoriesDetail.name}>
