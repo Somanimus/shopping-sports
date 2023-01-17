@@ -37,7 +37,7 @@ const Catalog = ({ categories }) => {
 
     useEffect(() => {
         dispatch(getProducts(false, false, productsLastCount))
-    }, [productsLastCount])
+    }, [productsLastCount, dispatch])
 
     console.log(categories)
 

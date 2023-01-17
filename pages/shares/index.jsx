@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Layout from "../../components/Layout/Layout";
 import { getShares } from "../../redux/action/sharesAction";
+import { BestCard } from "../../components/Best/Best";
 import * as styles from "./shares.module.css"
 
 const Shares = () => {
@@ -9,7 +10,7 @@ const Shares = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getShares())
-    }, [])
+    }, [dispatch])
     return (
         <Layout>
             <div className='container'>

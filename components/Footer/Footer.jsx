@@ -11,7 +11,7 @@ const Footer = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getCotegories())
-    }, [])
+    }, [dispatch])
     return (
         <footer>
             <div className={"container " + styles.footer}>

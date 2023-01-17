@@ -16,7 +16,7 @@ const Hero = () => {
     };
     useEffect(() => {
         dispatch(getProducts(false, false, false, state.replace(/ /gi, "+")));
-    }, [state]);
+    }, [state, dispatch]);
     const clickSearch = () => {
         dispatch(getProducts(false, false, false, state.replace(/ /gi, "+")));
     };

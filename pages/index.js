@@ -10,6 +10,7 @@ import Withus from "../components/Withus/Withus";
 import { getCotegories } from "../redux/action/categoriesAction";
 import { getColors } from "../redux/action/colorsAction";
 import { getFabrics } from "../redux/action/fabricsAction";
+import { Dispatch } from "redux";
 import { getOrder } from "../redux/action/orderAction";
 import { getProducts } from "../redux/action/productsAction";
 import { getSets } from "../redux/action/setsAction";
@@ -22,12 +23,12 @@ export default function Home() {
 
     useEffect(() => {
         dispatch(getProducts(true, false, productsNewCount))
-    }, [productsNewCount])
+    }, [productsNewCount, dispatch])
 
     useEffect(() => {
         dispatch(getProducts(false, false, productsLastCount))
         dispatch(getProducts(false, true, productsLastCount))
-    }, [productsLastCount])
+    }, [productsLastCount, dispatch])
 
     return (
         <Layout title="Главная">

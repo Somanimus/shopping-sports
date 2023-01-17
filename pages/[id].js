@@ -15,10 +15,10 @@ const Detail = () => {
         if(router.query.id){
             dispatch(getProductsDetail(router.query.id))
         }
-    }, [router.query.id])
+    }, [router.query.id, dispatch])
     useEffect(() => {
         dispatch(getProducts(false, true, productsLastCount))
-    }, [productsLastCount])
+    }, [productsLastCount, dispatch])
     return (
         <Layout title={productsDetail?.name}>
             <ProductsDetail productsDetail={productsDetail} />
