@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="container">
             <section className={styles.hero}>
                 <div className={styles.hero_left}>
-                    <h1 className={styles.hero_h1}>Мебель на любой вкус</h1>
+                    <h1 className={styles.hero_h1}>Товары для всех нужд</h1>
                     <p>
                         C помощью этого онлайн-генератора рыботекста можно
                         пачками плодить как отдельные предложения и заголовки
@@ -79,14 +79,7 @@ const Hero = () => {
                 </div>
 
                 <div className={styles.hero_right}>
-                    <Image
-                        id="img"
-                        src="/hero.png"
-                        alt="image"
-                        width={700}
-                        height={450}
-                    />
-                </div>
+               </div>
             </section>
         </div>
     );

@@ -43,7 +43,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <Image src='/map.png' alt='map' width={480} height={282} />
+                    <Image src='/map.ng' alt='map' width={480} height={282} />
                 </div>
             </div>
 

@@ -4,6 +4,12 @@
     justify-content: space-between;
     height: 60px;
 }
+.header{
+    background: var(--dark-background);
+}
+.header a {
+    color: white;
+}
 
 .nav_logo {
     width: 132px;
@@ -27,7 +33,9 @@
     justify-content: space-between;
     width: 455px;
 }
-
+.basket_svg{
+filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(245deg) brightness(103%) contrast(105%);
+}
 .basket_icon{
     position: relative;
 }

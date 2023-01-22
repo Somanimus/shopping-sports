@@ -8,28 +8,19 @@ const Navbar = () => {
     const { basket } = useSelector((state) => state.basket);
     const [modal, setModal] = useState(false);
     return (
-        <header>
+        <header className={` ${styles.header}`}>
             <nav className={`container ${styles.nav}`}>
                 <Link href="/">
                     <a>
                         <div className={styles.nav_logo}>
-                            <Image
-                                src="/logo.svg"
-                                alt="Logo"
-                                width={24}
-                                height={24}
-                            />
-                            <span>Corpus.kg</span>
+
+                            <span>Shopping.kg</span>
                         </div>
                     </a>
                 </Link>
 
                 <ul className={styles.nav_list}>
-                    <li>
-                        <Link href="/">
-                            <a>Главная</a>
-                        </Link>
-                    </li>
+
                     <li>
                         <Link href="/about">
                             <a>О нас</a>
@@ -50,7 +41,7 @@ const Navbar = () => {
                 <div className={styles.basket_icon}>
                     <Link href="/cart">
                         <a>
-                            <Image
+                            <Image className={styles.basket_svg}
                                 src="/shopping-bag.svg"
                                 alt="Logo"
                                 width={24}
@@ -76,11 +67,7 @@ const Navbar = () => {
                     style={!modal ? { display: "none" } : {}}
                 >
                     <ul className={styles.list_mobile}>
-                        <li>
-                            <Link href="/">
-                                <a>Главная</a>
-                            </Link>
-                        </li>
+
                         <li>
                             <Link href="/about">
                                 <a>О нас</a>

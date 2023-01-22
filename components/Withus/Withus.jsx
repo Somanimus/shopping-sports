@@ -6,7 +6,6 @@ const Card = () => {
     return (
         <div className={styles.card}>
             <div className={styles.card_flex}>
-                <Image src='/with1.svg' alt='Logo' width={50} height={50} />
                 <h3>Выгодно</h3>
             </div>
             <p>Сайт рыбатекст поможет дизайнеру</p>
@@ -18,7 +17,6 @@ const Card2 = () => {
     return (
         <div className={styles.card}>
             <div className={styles.card_flex}>
-                <Image src='/with2.svg' alt='Logo' width={50} height={50} />
                 <h3>Выгодно</h3>
             </div>
             <p>Сайт рыбатекст поможет дизайнеру</p>
@@ -30,7 +28,6 @@ const Card3 = () => {
     return (
         <div className={styles.card}>
             <div className={styles.card_flex}>
-                <Image src='/with3.svg' alt='Logo' width={50} height={50} />
                 <h3>Выгодно</h3>
             </div>
             <p>Сайт рыбатекст поможет дизайнеру</p>
@@ -42,7 +39,6 @@ const Card4 = () => {
     return (
         <div className={styles.card}>
             <div className={styles.card_flex}>
-                <Image src='/with4.svg' alt='Logo' width={50} height={50} />
                 <h3>Выгодно</h3>
             </div>
             <p>Сайт рыбатекст поможет дизайнеру</p>
