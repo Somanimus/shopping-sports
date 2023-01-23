@@ -25,10 +25,7 @@ const Hero = () => {
             <section className={styles.hero}>
                 <div className={styles.hero_left}>
                     <h1 className={styles.hero_h1}>Спорт товары для всех нужд</h1>
-                    <p>
-                        C помощью этого онлайн-генератора рыботекста можно
-                        пачками плодить как отдельные предложения и заголовки
-                    </p>
+                    <p>Удобный и выгодный магазин для приобретения качественной спорт экипировки</p>
                     <div className={styles.input_wrapper}>
                         <label className={styles.hero_input}>
                             <input

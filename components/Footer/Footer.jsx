@@ -49,31 +49,11 @@ const Footer = () => {
 
             <div className={"container " + styles.footer_bottom}>
                 <div className={styles.footer_soc}>
-                    <Image
-                        src='/instagram.svg'
-                        alt='instagram logo'
-                        width={24}
-                        height={24}
-                    />
-                    <Image
-                        src='/whatsapp.svg'
-                        alt='whatsapp logo'
-                        width={24}
-                        height={24}
-                    />
-                    <Image
-                        src='/facebook.svg'
-                        alt='facebook logo'
-                        width={24}
-                        height={24}
-                    />
-                    <Image
-                        src='/telegram.svg'
-                        alt='telegram logo'
-                        width={24}
-                        height={24}
-                    />
-                </div>
+                    <p> ОсОО &quot;Спорт Суппорт&quot; 
+Нуркамал  Жетикашкаева 29, г. Бишкек, Чуйская область,  Кыргызстан. 720028
+ИНН  02909202210082 
+ОКПО 31572782</p>
+               </div>
             </div>
         </footer>
     );

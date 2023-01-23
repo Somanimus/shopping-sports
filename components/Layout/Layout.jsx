@@ -7,7 +7,7 @@ const Layout = ({ title, children }) => {
     return (
         <>
             <Head>
-                <title>{title} | Sports.kg</title>
+                <title>{title} | Sport Support</title>
                 <meta
                     name='viewport'
                     content='initial-scale=1.0, width=device-width'

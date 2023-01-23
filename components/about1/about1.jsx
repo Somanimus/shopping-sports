@@ -10,11 +10,12 @@ const About = () => {
                 <div className={styles.about_left}>
                     <h1 className={styles.about_h1}>О компании</h1>
                     <p className={styles.about_p}>
-                        эта страница на данный момент пуста
+                     Sport Support — это доступ в мир спорта с рекордным ассортиментом! Это настоящий бренд-эксперт в спорте и активном отдыхе, который вдохновляет своих покупателей, мотивирует их и помогает регулярно заниматься спортом, чтобы радоваться жизни и менять себя к лучшему день за днем! 
                    </p>
                 </div>
 
                 <div className={styles.about_right}>
+                    <p></p>
                </div>
             </div>
             <div className={styles.dop_info}>

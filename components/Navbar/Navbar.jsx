@@ -14,7 +14,7 @@ const Navbar = () => {
                     <a>
                         <div className={styles.nav_logo}>
 
-                            <span>Shopping.kg</span>
+                            <span>Sport Support</span>
                         </div>
                     </a>
                 </Link>

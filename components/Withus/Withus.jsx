@@ -8,7 +8,7 @@ const Card = () => {
             <div className={styles.card_flex}>
                 <h3>Выгодно</h3>
             </div>
-            <p>Сайт рыбатекст поможет дизайнеру</p>
+            <p>Комплекты и отдельные товары по скидкам</p>
         </div>
     );
 };
@@ -17,9 +17,9 @@ const Card2 = () => {
     return (
         <div className={styles.card}>
             <div className={styles.card_flex}>
-                <h3>Выгодно</h3>
+                <h3>Удобно</h3>
             </div>
-            <p>Сайт рыбатекст поможет дизайнеру</p>
+            <p>Выбирайте и заказывайте товары со своего дома</p>
         </div>
     );
 };
@@ -28,9 +28,9 @@ const Card3 = () => {
     return (
         <div className={styles.card}>
             <div className={styles.card_flex}>
-                <h3>Выгодно</h3>
+                <h3>Качественно</h3>
             </div>
-            <p>Сайт рыбатекст поможет дизайнеру</p>
+            <p>Только надежные и качественные товары!</p>
         </div>
     );
 };
@@ -39,9 +39,9 @@ const Card4 = () => {
     return (
         <div className={styles.card}>
             <div className={styles.card_flex}>
-                <h3>Выгодно</h3>
+                <h3>Эффективно</h3>
             </div>
-            <p>Сайт рыбатекст поможет дизайнеру</p>
+            <p>Качество и низкая цена!</p>
         </div>
     );
 };

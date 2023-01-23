@@ -11,11 +11,10 @@ const Contacts = () => {
             </div>
 
             <div className={styles.contacts_right}>
-                <h1 className={styles.contacts_h1}></h1>
+                <h1 className={styles.contacts_h1}>Для связи с нами : </h1>
                 <p className={styles.contacts_p}>
-                    Почта:{" "}
-                    <a href=""></a>
-                </p>
+                    Тел: +996 774 777333
+               </p>
             </div>
             <div className={styles.iframe}>
            </div>

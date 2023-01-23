@@ -44,7 +44,7 @@ const Catalog = ({ categories }) => {
     return (
         <div className="gray_bg">
             <div className="container">
-                <h2>Категории товаров</h2>
+                <h2>Виды спорта</h2>
                 <div className={styles.best_card_wrapper}>
                     {
                         categories.length ? categories.map((item, idx) => {

@@ -36,7 +36,8 @@
 }
 
 .footer_soc {
-    width: 120px;
+    width: 90%;
+    font-size: 0.8em;
     display: flex;
     justify-content: space-between;
 }
