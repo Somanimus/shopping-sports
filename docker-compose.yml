@@ -7,4 +7,4 @@ services:
     volumes:
       - "./src:/app/src"
     ports:
-      - "95:70"
+      - "18:18"
