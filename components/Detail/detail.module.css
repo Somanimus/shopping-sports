@@ -36,7 +36,7 @@
 .best_card_btn{
     display: inline-block;
     padding: 10px 24px;
-    background: #f2c94c;
+    background: var(--btn-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     font-weight: 500;
@@ -58,7 +58,7 @@
 }
 
 .price span{
-    color: #f2c94c;
+    color: var(--btn-color);
     font-weight: bold;
 
 }

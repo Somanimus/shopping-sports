@@ -1,5 +1,5 @@
 .new_card {
-    background: #ffffff;
+    background: #fff;
     margin-top: 24px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
@@ -75,7 +75,7 @@
     width: 157px;
     height: 42px;
     left: calc(50% - 157px / 2 - 479.5px);
-    background: #f2c94c;
+    background: var(--btn-color);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     font-style: normal;

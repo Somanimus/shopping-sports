@@ -8,6 +8,7 @@
 :root{
   --st-backround : #c3e0e5;
   --dark-background : #274472;
+  --btn-color: #5885af;
 }
 body{
   background:  var(--st-backround);;
