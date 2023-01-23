@@ -6,9 +6,11 @@
   font-family: "Montserrat", sans-serif;
 }
 :root{
-  --st-backround : #c3e0e5;
-  --dark-background : #274472;
-  --btn-color: #5885af;
+  --dark-font: black;
+  --bright-font: white;
+  --st-backround : #c9c7c7;
+  --dark-background : #19204E;
+  --btn-color: #fcb300;
 }
 body{
   background:  var(--st-backround);;
@@ -34,7 +36,7 @@ a {
 
 .gray_bg {
   padding: 40px 0;
-  background: #4d86bb;
+  background: #df183f;
 }
 
 .slick-prev:before,
@@ -47,6 +49,9 @@ a {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.container h2{
+  color: white;
 }
 @media (min-width: 768px) {
   .container {

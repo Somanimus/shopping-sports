@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="container">
             <section className={styles.hero}>
                 <div className={styles.hero_left}>
-                    <h1 className={styles.hero_h1}>Товары для всех нужд</h1>
+                    <h1 className={styles.hero_h1}>Спорт товары для всех нужд</h1>
                     <p>
                         C помощью этого онлайн-генератора рыботекста можно
                         пачками плодить как отдельные предложения и заголовки

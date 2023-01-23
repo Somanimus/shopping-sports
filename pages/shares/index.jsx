@@ -14,7 +14,7 @@ const Shares = () => {
     return (
         <Layout>
             <div className='container'>
-                <h2>Акций</h2>
+                <h2 className={styles.headline_txt}>Акций</h2>
                 <div className={styles.best_card_wrapper}>
                     {
                         shares?.results?.length ? shares?.results?.map((item, idx) => {

@@ -27,7 +27,7 @@ const NewCard = ({ newContent }) => {
         <Image
           src={newContent.image}
           loader={() => newContent.image}
-          alt="sofa img"
+          alt={newContent.name}
           width={470}
           height={350}
           objectFit={"contain"}
