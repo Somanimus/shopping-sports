@@ -10,6 +10,9 @@
   margin-top: 1.5em;
   font-size: 1.2em;
 }
+.info_box h2{
+  font-size: 1.2em;
+}
 .headline {
   margin: auto;
   margin-top: 1.25em;
@@ -24,7 +27,7 @@
 }
 .info_left {
   width: 40ch;
-  margin-right: 10em;
+  margin-right: 5em;
 }
 .info_right {
   width: 40ch;

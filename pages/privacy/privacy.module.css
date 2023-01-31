@@ -1,0 +1,12 @@
+.privacy_container{
+width: 50ch;
+margin: auto;
+}
+.privacy_container h2{
+    font-size: 1.2em;
+}
+.privacy_container p{
+    font-size: 1.1em;
+    width: 40ch;
+    margin-bottom: 0.85em;
+}
