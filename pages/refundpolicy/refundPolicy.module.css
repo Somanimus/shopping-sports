@@ -1,0 +1,8 @@
+.policy_container{
+    display: flex;
+    min-height: 70vh;
+}
+.headline{
+    width: fit-content;
+    margin: 0 auto ;
+}

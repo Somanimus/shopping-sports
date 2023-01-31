@@ -15,6 +15,9 @@ const Contacts = () => {
                 <p className={styles.contacts_p}>
                     Тел: +996 774 777333
                </p>
+               <p className={styles.contacts_p}> 
+                    Адрес: Нуркамал Жетикашкаева 29, г. Бишкек
+               </p>
             </div>
             <div className={styles.iframe}>
            </div>
