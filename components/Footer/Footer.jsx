@@ -27,6 +27,7 @@ const Footer = () => {
                         <li><Link href={'/delivery_policy'}>Доставка</Link></li>
                         <li><Link href={'/terms_of_use'}>Политика и Условия</Link></li>
                         <li><Link href={'/accepted_payments'}>Платежы</Link></li>
+                        <li><Link href={'/privacy'}>Конфиденциальность</Link></li>
                     </ul>
                 </div>
 
