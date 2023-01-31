@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/action/productsAction";
 import { basketAction, getLocalStorage } from "../../redux/action/basketAction";
 import styles from "./card.module.css";
+import Router from "next/router";
+import { API_URL } from "../../https";
+import axios from "axios";
 
 const f = {
     "email": "lev201611@gmail.com",
@@ -16,20 +19,30 @@ const f = {
 }
 
 const Card = () => {
-    const [amount, setAmount] = useState(1)
     const { products } = useSelector((state) => state.products);
     const { basket } = useSelector((state) => state.basket);
     const dispatch = useDispatch();
+    console.log(products)
+    console.log(basket)
 
     useEffect(() => {
         dispatch(getProducts(false, false, 0));
         dispatch(basketAction());
     }, [dispatch]);
 
-    console.log(basket)
-
-    const formChange = (e) => {
+    const formChange = async (e) => {
         e.preventDefault()
+        const prodArray = []
+       // await axios.post(`${API_URL}/order/`, {
+        //     "email": "user@example.com",
+        //     "addres": "string",
+        //     "full_name": "string",
+        //     "phone": "string",
+        //     "ordered": true,
+        //     "products": prodArray
+              
+        // }).then ( res => console.log(res)).catch(err => console.log(err))
+
     } 
 
     return (
@@ -41,7 +54,7 @@ const Card = () => {
                         .map((item, idx) => {
                             return (
                                 <div key={item.id}>
-                                    <BestCard content={item} new_is={false} count={amount} setCount={setAmount} />
+                                    <BestCard content={item} new_is={false}  />
                                 </div>
                             );
                         })
@@ -57,7 +70,7 @@ const Card = () => {
                     <div>
                         <label>
                             <span>Имя *</span>
-                            <input type="text" required name="full_name" />
+                            <input type="text"  required maxLength={20} name="full_name" />
                         </label>
                         <label>
                             <span>Email *</span>

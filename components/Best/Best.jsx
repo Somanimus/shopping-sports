@@ -18,13 +18,12 @@ const Hit = () => {
 export const BestCard = ({
     new_is,
     content,
-    count = 1,
-    setCount = () => {},
 }) => {
     const [amount, setAmount] = useState(content.price.replace(/\..*/, ""));
     const { basket } = useSelector((state) => state.basket);
     const dispatch = useDispatch();
     const router = useRouter()
+    const [count, setCount] =useState(1)
 
     function onClickButton(e) {
         e.preventDefault();
@@ -47,7 +46,7 @@ export const BestCard = ({
     }
 
     return (
-        <Link href={`/[id]`} as={`/${content.id}`}>
+        <Link href={`/[id]`} as={`/${content.id}`} >
             <a className={styles.card_link}>
                 <div className={styles.best_card}>
                     <div className={styles.best_center}>
