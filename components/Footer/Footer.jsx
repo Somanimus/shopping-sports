@@ -17,20 +17,21 @@ const Footer = () => {
             <div className={"container " + styles.footer}>
                 <div>
                     <ul className={styles.footer_ul}>
-                        <li>О нас</li>
+                        <li><Link href={'/about/'}>О нас</Link></li>
                         <Link href={"/goodCreadit"}>
                             <a><li>Товары в кредит</li></a>
                         </Link>
                         <Link href={"/shares"}>
                             <a><li>Акции</li></a>
                         </Link>
-                        <li>Гарантия</li>
+                        <li><Link href={'/delivery'}>Доставка</Link></li>
+                        <li><Link href={'/shares'}>Условия возврата</Link></li>
                     </ul>
                 </div>
 
                 <div>
                     <ul className={styles.footer_ul}>
-                        <li>Каталог</li>
+                        <li><Link href={'/catalog/'}>Каталог</Link></li>
                         {
                             categories?.map((item, idx) => (
                                 <Link key={item.id} href="/catalog/[id]" as={`/catalog/${item.id}`}>
