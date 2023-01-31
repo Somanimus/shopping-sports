@@ -17,7 +17,7 @@ const Footer = () => {
             <div className={"container " + styles.footer}>
                 <div>
                     <ul className={styles.footer_ul}>
-                        <li><Link href={'/about_us/'}>О нас</Link></li>
+                        <li><Link href={'/about/'}>О нас</Link></li>
                         <Link href={"/goodCreadit"}>
                             <a><li>Товары в кредит</li></a>
                         </Link>
@@ -26,7 +26,7 @@ const Footer = () => {
                         </Link>
                         <li><Link href={'/delivery_policy'}>Доставка</Link></li>
                         <li><Link href={'/terms_of_use'}>Политика и Условия</Link></li>
-                        <li><Link href={'/accepted_payments'}>Платежы</Link></li>
+                        <li><Link href={'/accepted_payments'}>Платежи</Link></li>
                         <li><Link href={'/privacy'}>Конфиденциальность</Link></li>
                     </ul>
                 </div>

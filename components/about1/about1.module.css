@@ -7,10 +7,13 @@
 
 
 
-.about_left{
+.about_left .about_h2{
+    color: rgb(51, 49, 49);
+    font-size: 1.5em;
     
 }
 .about_h1{
+    font-size: 2.5em;
 }
 .about_p{
     margin-top: 50px;
