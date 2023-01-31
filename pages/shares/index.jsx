@@ -6,7 +6,7 @@ import { BestCard } from "../../components/Best/Best";
 import * as styles from "./shares.module.css"
 
 const Shares = () => {
-    const {shares} = useSelector(state => state.shares)
+    const { shares } = useSelector(state => state.shares)
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getShares())

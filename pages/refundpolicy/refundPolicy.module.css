@@ -1,8 +1,16 @@
-.policy_container{
-    display: flex;
-    min-height: 70vh;
+.policy_container {
+  min-height: 70vh;
+  width: 60ch;
+  margin: 0 auto;
+  margin-bottom: 5vh;
 }
-.headline{
-    width: fit-content;
-    margin: 0 auto ;
+.headline {
+  margin: 0 auto;
+  margin-top: 1.25em;
+  width: fit-content;
+}
+
+.info {
+  font-size: 1.1em;
+  margin-top: 1.25rem;
 }

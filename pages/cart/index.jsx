@@ -15,7 +15,7 @@ const f = {
     "full_name": "lev Boiko",
     "phone": "0559595139",
     "ordered": false,
-    "products": [{"prod_id": 1, "amount": 10}, {"prod_id": 2, "amount": 3}]
+    "products": [{ "prod_id": 1, "amount": 10 }, { "prod_id": 2, "amount": 3 }]
 }
 
 const Card = () => {
@@ -33,17 +33,17 @@ const Card = () => {
     const formChange = async (e) => {
         e.preventDefault()
         const prodArray = []
-       // await axios.post(`${API_URL}/order/`, {
+        // await axios.post(`${API_URL}/order/`, {
         //     "email": "user@example.com",
         //     "addres": "string",
         //     "full_name": "string",
         //     "phone": "string",
         //     "ordered": true,
         //     "products": prodArray
-              
+
         // }).then ( res => console.log(res)).catch(err => console.log(err))
 
-    } 
+    }
 
     return (
         <Layout title="Корзина">
@@ -54,7 +54,7 @@ const Card = () => {
                         .map((item, idx) => {
                             return (
                                 <div key={item.id}>
-                                    <BestCard content={item} new_is={false}  />
+                                    <BestCard content={item} new_is={false} />
                                 </div>
                             );
                         })
@@ -70,7 +70,7 @@ const Card = () => {
                     <div>
                         <label>
                             <span>Имя *</span>
-                            <input type="text"  required maxLength={20} name="full_name" />
+                            <input type="text" required maxLength={20} name="full_name" />
                         </label>
                         <label>
                             <span>Email *</span>

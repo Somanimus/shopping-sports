@@ -23,7 +23,7 @@ export const BestCard = ({
     const { basket } = useSelector((state) => state.basket);
     const dispatch = useDispatch();
     const router = useRouter()
-    const [count, setCount] =useState(1)
+    const [count, setCount] = useState(1)
 
     function onClickButton(e) {
         e.preventDefault();
@@ -34,14 +34,14 @@ export const BestCard = ({
     const increment = (e) => {
         e.preventDefault()
         setAmount(+amount + Number(content.price.replace(/\..*/, "")))
-        setCount(count+1)
+        setCount(count + 1)
     }
 
     const decrement = (e) => {
         e.preventDefault()
-        if(count > 1){
+        if (count > 1) {
             setAmount(+amount - content.price.replace(/\..*/, ""))
-            setCount(count-1)
+            setCount(count - 1)
         }
     }
 
@@ -113,15 +113,15 @@ const Best = ({ productsHit }) => {
                 <div className={styles.best_card_wrapper}>
                     {productsHit?.results?.length
                         ? productsHit?.results.map((item, idx) => {
-                              return (
-                                  <div className={styles.card_link} key={idx}>
-                                      <BestCard
-                                          new_is={item ? item.is_new : false}
-                                          content={item}
-                                      />
-                                  </div>
-                              );
-                          })
+                            return (
+                                <div className={styles.card_link} key={idx}>
+                                    <BestCard
+                                        new_is={item ? item.is_new : false}
+                                        content={item}
+                                    />
+                                </div>
+                            );
+                        })
                         : "покачто нету популярных товаров"}
                 </div>
             </div>

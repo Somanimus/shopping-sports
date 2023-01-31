@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import styles from './Footer.module.css';
 
 import Image from 'next/image';
-import {useDispatch, useSelector} from "react-redux";
-import {getCotegories} from "../../redux/action/categoriesAction";
+import { useDispatch, useSelector } from "react-redux";
+import { getCotegories } from "../../redux/action/categoriesAction";
 import Link from "next/link";
 
 const Footer = () => {
@@ -25,7 +25,8 @@ const Footer = () => {
                             <a><li>Акции</li></a>
                         </Link>
                         <li><Link href={'/delivery'}>Доставка</Link></li>
-                        <li><Link href={'/shares'}>Условия возврата</Link></li>
+                        <li><Link href={'/refundpolicy'}>Условия возврата</Link></li>
+                        <li><Link href={'/acceptedPayments'}>Платежы</Link></li>
                     </ul>
                 </div>
 
@@ -50,11 +51,11 @@ const Footer = () => {
 
             <div className={"container " + styles.footer_bottom}>
                 <div className={styles.footer_soc}>
-                    <p> ОсОО &quot;Спорт Суппорт&quot; 
-Нуркамал  Жетикашкаева 29, г. Бишкек, Чуйская область,  Кыргызстан. 720028
-ИНН  02909202210082 
-ОКПО 31572782</p>
-               </div>
+                    <p> ОсОО &quot;Спорт Суппорт&quot;
+                        Нуркамал  Жетикашкаева 29, г. Бишкек, Чуйская область,  Кыргызстан. 720028
+                        ИНН  02909202210082
+                        ОКПО 31572782</p>
+                </div>
             </div>
         </footer>
     );

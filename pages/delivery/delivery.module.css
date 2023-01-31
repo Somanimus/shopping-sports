@@ -1,34 +1,31 @@
-.delivery_container{
-    min-height: 70vh;
+.delivery_container {
+  min-height: 70vh;
 }
-.list > li{
-margin-left: 1em;
+.list > li {
+  margin-left: 1em;
 }
-.info_box{
-    display: flex;
-    justify-content: center; 
-    margin-top: 1.5em;
-    font-size: 1.2em;
+.info_box {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+  font-size: 1.2em;
 }
-.headline{
-
-    margin: auto;
-    margin-top: 1.25em ;
-    width: fit-content;
-    
+.headline {
+  margin: auto;
+  margin-top: 1.25em;
+  width: fit-content;
 }
-.headline_second{
-    font-size: 1.3em;
-    margin-bottom: 0.25em;
+.headline_second {
+  font-size: 1.3em;
+  margin-bottom: 0.25em;
 }
-.map{
-    border:none
+.map {
+  border: none;
 }
-.info_left{
-    width: 40ch;
-    margin-right: 10em;
-
+.info_left {
+  width: 40ch;
+  margin-right: 10em;
 }
-.info_right{
-    width: 40ch;
+.info_right {
+  width: 40ch;
 }

@@ -56,19 +56,19 @@ const SubCategory = () => {
             </div>
             <div className="container">
                 <div className={styles.best_card_wrapper}>
-                {
-                    products?.results?.filter(item => item.subcategory === subCategoriesDetail.name).map((item) => (
-                        <Link
-                            href="/[id]"
-                            as={`/${item.id}`}
-                            key={item.id}
-                        >
-                            <a style={{cursor: "auto"}}>
-                                <BestCardCatalog content={item} />
-                            </a>
-                        </Link>
-                    ))
-                }
+                    {
+                        products?.results?.filter(item => item.subcategory === subCategoriesDetail.name).map((item) => (
+                            <Link
+                                href="/[id]"
+                                as={`/${item.id}`}
+                                key={item.id}
+                            >
+                                <a style={{ cursor: "auto" }}>
+                                    <BestCardCatalog content={item} />
+                                </a>
+                            </Link>
+                        ))
+                    }
                 </div>
             </div>
             <div className="container">
