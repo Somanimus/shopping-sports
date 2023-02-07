@@ -1,0 +1,3 @@
+export const GET_FABRICS = "GET_FABRICS"
+export const LOADING_FABRICS = "LOADING_FABRICS"
+export const ERROR_FABRICS = "ERROR_FABRICS"

@@ -1,0 +1,40 @@
+.about__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 100px;
+    grid-column-gap: 30px;
+    color: var(--txt-bright-color);
+}
+
+
+
+.about_left{
+    
+}
+.about_h1{
+}
+.about_p{
+    margin-top: 50px;
+}
+
+.dop_info{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 992px) {
+    .about__content{
+        grid-template-columns: 100%;
+        margin-top: 30px;
+    }
+    .about_p{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .dop_info{
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    
+}

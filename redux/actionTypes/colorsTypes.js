@@ -1,0 +1,3 @@
+export const GET_COLORS = "GET_COLORS"
+export const LOADING_COLORS = "LOADING_COLORS"
+export const ERROR_COLORS = "ERROR_COLORS"

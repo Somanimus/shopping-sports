@@ -1,0 +1,168 @@
+.hero {
+    display: flex;
+    justify-content: flex-start;
+    padding: 130px 0;
+    color:  #f8f8f2;
+}
+
+.hero_h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 78px;
+    color: #f8f8f2;
+}
+
+.hero_left {
+    height: 100%;
+    width: 55%;
+}
+
+.hero_left > p {
+    margin-top: 20px;
+}
+
+.input_wrapper {
+    display: flex;
+    margin-top: 80px;
+    position: relative;
+    align-items: center;
+}
+.modalInput{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 4px 4px 5px #00000066;
+    width: 380px;
+    padding: 10px;
+    background: var(--st-backround);
+}
+.modalInput>a{
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding: 10px 0;
+}
+
+.hero_input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border: 2px solid var(--btn-color);
+    background: var(--st-backround);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.hero_input input {
+    width: 100%;
+    border: none;
+    background: var(--st-backround);
+    font-size: 16px;
+    outline: none;
+}
+.hero_input svg{
+    fill: var(--btn-color);
+}
+
+.hero_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 34px;
+    width: 128px;
+    height: 58px;
+    background: var(--btn-color);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    outline: none;
+    margin-left: 20px;
+}
+
+.hero_right{
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    width: calc(750 / 1920 * 100vw);
+    height: calc(750 / 1920 * 100vw);
+}
+
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero_left{
+        width: 100%;
+    }
+    .modalInput{
+        width: 100%;
+    }
+    .hero_input {
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
+        border: 2px solid #bdbdbd;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .hero_input input {
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        outline: none;
+    }
+    .hero_input svg{
+        fill: #bdbdbd;
+    }
+    
+    .hero_btn {
+        display: none;
+    }
+    .hero_right{
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero_left{
+        width: 100%;
+    }
+    .hero_h1 {
+        font-size: 50px;
+    }
+    .modalInput{
+        width: 100%;
+    }
+    .hero_input {
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
+        border: 2px solid #bdbdbd;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .hero_input input {
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        outline: none;
+    }
+    .hero_input svg{
+        fill: #bdbdbd;
+    }
+    
+    .hero_btn {
+        display: none;
+    }
+    .hero_right{
+        display: none;
+    }
+}

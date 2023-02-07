@@ -1,0 +1,2 @@
+export const GET_SHARES = "GET_SHARES"
+export const GET_SHARES_ERROR = "GET_SHARES_ERROR"
