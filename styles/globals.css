@@ -15,6 +15,10 @@
 body{
   background:  var(--st-backround);;
 }
+.svg{
+  filter: invert(92%) sepia(19%) saturate(266%) hue-rotate(5deg) brightness(118%) contrast(94%);
+}
+
 
 h2 {
   font-size: 36px;
@@ -30,13 +34,21 @@ h3 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--bright-font);
   cursor: pointer;
+  transition: 0.3s ease-out 50ms;
+}
+a:hover{
+  font-size: 1.05em;
+  color: var(--btn-color);
 }
 
 .gray_bg {
   padding: 40px 0;
   background: #df183f;
+}
+.text-center{
+  text-align: center;
 }
 
 .slick-prev:before,

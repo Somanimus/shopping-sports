@@ -3,15 +3,20 @@
     margin: 0 auto;
 }
 
+
+
 .best_card {
     background: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    margin-top: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 16px;
+    transition:  0.3s ease-out 100ms;
+}
+.best_card:hover{
+    background: #ededed;
+    transform: translateY(-5px);
+
 }
 
 .card_link{
@@ -145,8 +150,11 @@
 	right: 0;
 	width: 70%;
 	height: 1.2em;
-	background: linear-gradient(to right, rgba(255, 255, 255, 0), white 100%);
+
 	pointer-events: none;
+}
+.best_card::after:hover{
+    background:linear-gradient(to right, rgba(255, 255, 255, 0), rgb(231, 231, 231) 100%); ;
 }
 
 .best_card_price {

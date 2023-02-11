@@ -71,7 +71,7 @@ const Last = ({product}) => {
                                     <BestCard new_is={item.is_new} content={item} />
                                 </div>
                             )
-                        }) : "Пока что новых товаров нет"
+                        }) : "Сейчас товаров под данной категорией нет"
                     }
 
                 </div>

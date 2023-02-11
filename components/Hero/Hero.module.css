@@ -47,7 +47,7 @@
     width: 100%;
     height: 100%;
     padding: 10px 20px;
-    border: 2px solid var(--dark-background);
+    border: 2px solid var(--btn-color);
     background: var(--st-backround);
     border-radius: 10px;
     display: flex;
@@ -61,7 +61,7 @@
     outline: none;
 }
 .hero_input svg{
-    fill: var(--dark-background);
+    fill: var(--btn-color);
 }
 
 .hero_btn {

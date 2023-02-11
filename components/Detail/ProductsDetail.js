@@ -46,7 +46,7 @@ const ProductsDetail = ({ productsDetail }) => {
         prevArrow: <SamplePrevArrow />,
     };
     return (
-        <div className="container">
+        <div className="container" style={{'marginTop' : '6em', 'marginBottom' : '4em'}}>
             <div className={styles.content}>
                 <div className={styles.slider}>
                     <Slider {...settings}>
@@ -151,10 +151,10 @@ const ProductsDetail = ({ productsDetail }) => {
                         )}
                     </div>
 
-                    <div><strong>Под котегория:</strong> {productsDetail.subcategory}</div>
-                    <div><strong>Комплектация:</strong> {productsDetail.prod_set}</div>
-                    <div><strong>Цвет:</strong> {productsDetail.color}</div>
-                    <div><strong>Описание:</strong> {productsDetail.description}</div>
+                    <div style={{'marginBottom' : '1.5em'}}><strong>Под котегория:</strong> {productsDetail.subcategory}</div>
+                    <div style={{'marginBottom' : '1.5em'}}><strong>Комплектация:</strong> {productsDetail.prod_set}</div>
+                    <div style={{'marginBottom' : '1.5em'}}><strong>Цвет:</strong> {productsDetail.color}</div>
+                    <div style={{'marginBottom' : '1.5em'}}><strong>Описание:</strong> {productsDetail.description}</div>
                     <div className={styles.btn_card_price}>
                         <div className={styles.price}>
                             <strong>Цена:</strong>{" "}

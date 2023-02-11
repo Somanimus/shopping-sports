@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import styles from './Footer.module.css';
 
 import Image from 'next/image';
-import { useDispatch, useSelector } from "react-redux";
-import { getCotegories } from "../../redux/action/categoriesAction";
+import {useDispatch, useSelector} from "react-redux";
+import {getCotegories} from "../../redux/action/categoriesAction";
 import Link from "next/link";
 
 const Footer = () => {

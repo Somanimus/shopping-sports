@@ -56,7 +56,7 @@ const New = ({ productsNew }) => {
             ? productsNew.results.map((item, idx) => (
                 <NewCard newContent={item} key={idx} />
               ))
-            : "пока что нету новинок"}
+            : "Сейчас товаров под данной категорией нет"}
         </div>
         {productsNew.count > productsNewCountNew ? (
           <LoadMore click={() => limitIncrement()} />

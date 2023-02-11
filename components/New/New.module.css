@@ -7,6 +7,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
+    transition:  0.3s ease-out 100ms;
+}
+.new_card:hover{
+transform: translateY(-5px);
 }
 
 .new_card_right {

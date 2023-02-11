@@ -34,7 +34,6 @@ USER nextjs
 EXPOSE 18
 
 ENV PORT 18 
-
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry.

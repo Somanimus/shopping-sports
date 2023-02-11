@@ -18,12 +18,14 @@ const Hit = () => {
 export const BestCard = ({
     new_is,
     content,
+
 }) => {
     const [amount, setAmount] = useState(content.price.replace(/\..*/, ""));
     const { basket } = useSelector((state) => state.basket);
     const dispatch = useDispatch();
     const router = useRouter()
     const [count, setCount] = useState(1)
+
 
     function onClickButton(e) {
         e.preventDefault();
@@ -35,6 +37,7 @@ export const BestCard = ({
         e.preventDefault()
         setAmount(+amount + Number(content.price.replace(/\..*/, "")))
         setCount(count + 1)
+
     }
 
     const decrement = (e) => {
@@ -42,7 +45,7 @@ export const BestCard = ({
         if (count > 1) {
             setAmount(+amount - content.price.replace(/\..*/, ""))
             setCount(count - 1)
-        }
+       }
     }
 
     return (
@@ -86,7 +89,7 @@ export const BestCard = ({
                                 //     <div className={styles.value}>{count}</div>
                                 // </div> 
                                 ""
-                            ) : (
+                           ) : (
                                 ""
                             )}
                         </div>
@@ -110,20 +113,21 @@ const Best = ({ productsHit }) => {
     return (
         <div className="gray_bg">
             <div className="container">
-                <h2>Лучшие товары</h2>
+
+                <h2 className="text-center">Лучшие товары</h2>
                 <div className={styles.best_card_wrapper}>
                     {productsHit?.results?.length
                         ? productsHit?.results.map((item, idx) => {
-                            return (
-                                <div className={styles.card_link} key={idx}>
-                                    <BestCard
-                                        new_is={item ? item.is_new : false}
-                                        content={item}
-                                    />
-                                </div>
-                            );
-                        })
-                        : "покачто нету популярных товаров"}
+                              return (
+                                  <div className={styles.card_link} key={idx}>
+                                      <BestCard
+                                          new_is={item ? item.is_new : false}
+                                          content={item}
+                                      />
+                                  </div>
+                              );
+                          })
+                        : "Сейчас товаров под данной категорией нет"}
                 </div>
             </div>
             {productsHit.count > productsHit.count ? <LoadMore /> : ""}
