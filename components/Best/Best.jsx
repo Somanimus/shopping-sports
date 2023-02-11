@@ -78,13 +78,14 @@ export const BestCard = ({
                                 {amount} сом
                             </div>
                             {router.asPath === "/cart" ? (
-                                <div className={styles.count}>
-                                    <div>
-                                        <div className={styles.increment} onClick={increment}>+</div>
-                                        <div className={styles.decrement} onClick={decrement}>-</div>
-                                    </div>
-                                    <div className={styles.value}>{count}</div>
-                                </div>
+                                // <div className={styles.count}>
+                                //     <div>
+                                //         <div className={styles.increment} onClick={increment}>+</div>
+                                //         <div className={styles.decrement} onClick={decrement}>-</div>
+                                //     </div>
+                                //     <div className={styles.value}>{count}</div>
+                                // </div> 
+                                ""
                             ) : (
                                 ""
                             )}
