@@ -1,5 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+
 import axios from "axios";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import styles from './add_balance.module.css'
@@ -8,6 +10,8 @@ import { API_URL } from "../../https";
 
 const index = () => {
     const [user, setUser] = useState({})
+    const router = useRouter()
+    const [redirect, setRedirect] = useState('')
   const [data, setData] = useState({
     amount: "",
     currency: "rub",
@@ -34,7 +38,7 @@ const index = () => {
         {
           amount: `${data.amount}00`,
           currency: "rub",
-          client_ip_addr: '176.123.240.175',
+          client_ip_addr: '143.42.17.183',
           description: data.description,
           card_holder_name: data.name,
           card_number: data.card_number,

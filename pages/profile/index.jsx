@@ -1,10 +1,15 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Layout from "../../components/Layout/Layout";
 import { API_URL } from "../../https";
 
 const index = () => {
+    const router = useRouter()
+    const handleClick =  () => {
+        router.push('/add_balance')
+    }
     const [user, setUser] = useState({})
     useEffect(() => {
      const fetchUser =async () => {
@@ -30,6 +35,9 @@ const index = () => {
         <p> <b>name</b>: {user.first_name} </p>
         <p> <b>last name: {user.last_name}</b></p>
         <p> <b>balance</b>: {user.balance}</p>
+        <button onClick={handleClick}>
+            update balance
+        </button>
      </section>
     </Layout>
   );

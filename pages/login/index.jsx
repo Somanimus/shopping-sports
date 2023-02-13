@@ -3,9 +3,11 @@ import axios from "axios";
 import styles from './login.module.css'
 import React, { useState } from "react";
 import Layout from "../../components/Layout/Layout";
+import { useRouter } from "next/router";
 import { API_URL } from "../../https";
 
 const index = () => {
+  const router = useRouter()
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -16,7 +18,7 @@ const index = () => {
         axios.post(`${API_URL}/login/`, {
             email: data.email,
             password: data.password
-         }).then(res => localStorage.setItem('token', JSON.stringify(res.data))).catch(err => console.log(err))
+         }).then(res => localStorage.setItem('token', JSON.stringify(res.data))).then(router.push('/profile')).catch(err => console.log(err))
 
 
   };

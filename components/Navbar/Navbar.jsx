@@ -36,6 +36,12 @@ const Navbar = () => {
                             <a>Контакты</a>
                         </Link>
                     </li>
+                        <li>
+                            <Link href="/register">
+                                <a >регистрация</a>
+                            </Link>
+                        </li>
+ 
                 </ul>
 
                 <div className={styles.basket_icon}>
@@ -86,6 +92,11 @@ const Navbar = () => {
                         <li>
                             <Link href="/cart">
                                 <a>магазин</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/register">
+                                <a >регистрация</a>
                             </Link>
                         </li>
                     </ul>

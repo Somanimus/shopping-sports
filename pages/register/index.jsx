@@ -4,6 +4,7 @@ import styles from './register.module.css'
 import React, { useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { API_URL } from "../../https";
+import { useRouter } from "next/router";
 
 const index = () => {
   const [data, setData] = useState({
@@ -11,18 +12,23 @@ const index = () => {
     password: "",
     confirmPassword: "",
   });
+
+    const router = useRouter()
   const handleSubmit = (e) => {
     e.preventDefault();
     if (data.password === data.confirmPassword) {
         axios.post(`${API_URL}/registration/`, {
             email: data.email,
             password: data.password
-        }).then(res => console.log(res)).catch(err => console.log(err))}
+        }).then(res => console.log(res)).then(router.push('/login')).catch(err => console.log(err))}
         else{
             alert('please fill all the fields correctly')
         }
 
   };
+  const handleRedirect = (url) => {
+    router.push(url)
+  }
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData((prevState) => ({
