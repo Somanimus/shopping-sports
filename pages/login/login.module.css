@@ -1,0 +1,25 @@
+.form{
+    height: fit-content;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    align-items: center;
+}
+.form > p{
+    margin-bottom: 2em;
+}
+.form > input{
+height: 3em;
+width: 50ch;
+margin-bottom: 1.5em;
+box-sizing: border-box;
+padding: 0.5em;
+}
+.button{
+    width: 30ch;
+    margin: auto;
+    height: 2.895em;
+}
