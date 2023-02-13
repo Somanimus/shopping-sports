@@ -41,7 +41,11 @@ const Navbar = () => {
                                 <a >регистрация</a>
                             </Link>
                         </li>
- 
+                         <li>
+                            <Link href="/profile">
+                                <a >профиль</a>
+                            </Link>
+                        </li>
                 </ul>
 
                 <div className={styles.basket_icon}>
