@@ -23,3 +23,9 @@ padding: 0.5em;
     margin: auto;
     height: 2.895em;
 }
+.link{
+    color: black;
+}
+.link:hover{
+    color: black;
+}
