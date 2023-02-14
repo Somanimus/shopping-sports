@@ -51,7 +51,8 @@ const index = () => {
           },
         }
       )
-      .then((res) => console.log(res))
+      .then((res) => (res.data.result.confirm_url))
+      .then(link => router.push(link))
       .catch((err) => console.log(err));
   };
 
