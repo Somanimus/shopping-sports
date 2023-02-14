@@ -9,6 +9,7 @@ const About = () => {
             <div className={styles.about__content}>
                 <div className={styles.about_left}>
                     <h1 className={styles.about_h1}>О компании</h1>
+                    <p className={styles.about_p}>SportSupport - это онлайн магазин для спорт товаров различного калибра</p>
                     <p className={styles.about_p}>
                    Удобство, доступность и качество лежат в основе каждого продукта, который мы продаем, и мы стремимся к тому, чтобы каждый предлагаемый нами ассортимент отражал эти ценности. Наша цель сосредоточена на трех факторах: наше влияние, наши продукты и наши люди.
                    </p>
