@@ -7,8 +7,13 @@
 .header{
     background: var(--dark-background);
 }
-.nav{
+
+.logout_btn{
+    background: none;
+    border: none;
+
 }
+
 .header a {
     color:var(--bright-font);
 }

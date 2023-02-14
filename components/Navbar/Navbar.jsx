@@ -3,10 +3,22 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+    const router = useRouter()
     const { basket } = useSelector((state) => state.basket);
     const [modal, setModal] = useState(false);
+    let token = ''
+    if (typeof window !== 'undefined'){
+
+     token = JSON.parse(localStorage.getItem("token"))
+    }
+    const handleLogout = () => {
+        localStorage.removeItem("token")
+        router.push('/').then(() => window.location.reload())
+    }
+
     return (
         <header className={` ${styles.header}`}>
             <nav className={`container ${styles.nav}`}>
@@ -36,17 +48,31 @@ const Navbar = () => {
                             <a>Контакты</a>
                         </Link>
                     </li>
+                    {token ?
+                        <>
                         <li>
-                            <Link href="/register">
-                                <a >регистрация</a>
-                            </Link>
-                        </li>
-                         <li>
                             <Link href="/profile">
                                 <a >профиль</a>
                             </Link>
                         </li>
-                </ul>
+                        <li>
+                            <button className={styles.logout_btn} onClick={handleLogout} href="/profile">
+                                <a >выйти</a>
+                            </button>
+                        </li>
+
+
+                        </> 
+  :                      <li>
+                            <Link href="/login">
+                                <a >войти</a>
+                            </Link>
+                        </li>  
+
+
+                        }
+
+               </ul>
 
                 <div className={styles.basket_icon}>
                     <Link href="/cart">
