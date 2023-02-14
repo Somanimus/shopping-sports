@@ -18,6 +18,17 @@ body{
 .svg{
   filter: invert(92%) sepia(19%) saturate(266%) hue-rotate(5deg) brightness(118%) contrast(94%);
 }
+button{
+  background: var(--btn-color);
+  border: none;
+  border-radius: 5px;
+}
+.success{
+  background: green;
+}
+.error{
+background: red;
+}
 
 
 h2 {
