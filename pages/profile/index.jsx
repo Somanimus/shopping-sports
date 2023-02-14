@@ -2,6 +2,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import styles from './profile.module.css'
 import Layout from "../../components/Layout/Layout";
 import { API_URL } from "../../https";
 
@@ -26,19 +27,26 @@ const index = () => {
         }
      }
      fetchUser()
-   }, [])
+     if( typeof window !== undefined) {
+      localStorage.setItem("user_id" , user.id)
+     }
+   }, [user.id])
    console.log(user) 
   return (
     <Layout title="register">
       <section className="container">
+        <div className={styles.profile_box}>
         <h1>Profile</h1>
-        <p> <b>name</b>: {user.first_name} </p>
+        <p> <b>first name</b>: {user.first_name} </p>
+        <p> <b>phone number</b>: {user.phone_number} </p>
         <p> <b>last name: {user.last_name}</b></p>
         <p> <b>balance</b>: {user.balance}</p>
         <button onClick={handleClick}>
-            update balance
+           UPDATE BALANCE 
         </button>
-     </section>
+
+        </div>
+           </section>
     </Layout>
   );
 };

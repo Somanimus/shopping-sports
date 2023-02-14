@@ -1,0 +1,36 @@
+.profile_box{
+    width: 40%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 5em;
+
+}
+.profile_box > *{
+    margin-bottom: 1em;
+    width: 100%;
+    font-size: 1.25em;
+    border: 1px solid gray;
+    padding: 0.55em;
+    border-radius: 5px;
+
+}
+.profile_box > p > b{
+    font-size: 1.2em;
+}
+.profile_box > h1{
+    text-align: center;
+    border: none;
+    font-size: 2em;
+}
+.profile_box > button{
+    height: 2.5em;
+    background: var(--btn-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px  2px  rgba(0, 0, 0, 0.34);
+    transition: 0.3s;
+}
+.profile_box > button:active{
+    box-shadow: 0 0 0 0;
+    transform: translateY(5px);
+}
