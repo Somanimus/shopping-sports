@@ -38,7 +38,7 @@ const index = () => {
 
   return (
     <Layout title="login">
-      <section className="container">
+      <section className="container full_screen">
         <form
           action="register"
           onSubmit={(e) => handleSubmit(e)}
