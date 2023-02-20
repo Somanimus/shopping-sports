@@ -10,11 +10,12 @@
   grid-template-columns: repeat(3, 1fr);
 }
 .footer_ul a{
-    color: var(--dark-font);
+    color: var(--bright-font);
 }
 .footer_soc > p{
   width: 100%;
-}
+  color: var(--bright-font);
+} 
 
 @media (max-width: 1024px) {
   .footer {

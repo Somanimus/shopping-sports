@@ -12,8 +12,14 @@
   --dark-background : #19204E;
   --btn-color: #fcb300;
 }
+footer{
+  background: var(--dark-background);
+}
+.full_screen{
+  min-height: 60vh;
+}
 body{
-  background:  var(--st-backround);;
+  background:  var(--bright-font);;
 }
 .svg{
   filter: invert(92%) sepia(19%) saturate(266%) hue-rotate(5deg) brightness(118%) contrast(94%);
@@ -29,6 +35,7 @@ button{
 .error{
 background: red;
 }
+
 
 
 h2 {
@@ -56,7 +63,8 @@ a:hover{
 
 .gray_bg {
   padding: 40px 0;
-  background: #df183f;
+  background: linear-gradient(90deg, hsla(348, 81%, 48%, 1) 0%, hsla(224, 51%, 51%, 1) 100%);
+;
 }
 .text-center{
   text-align: center;

@@ -43,7 +43,7 @@ const Catalog = ({ categories }) => {
 
     return (
         <div className="gray_bg">
-            <div className="container">
+            <div className="container full_screen">
                 <h2>Виды спорта</h2>
                 <div className={styles.best_card_wrapper}>
                     {

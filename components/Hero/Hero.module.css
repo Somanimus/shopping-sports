@@ -10,13 +10,64 @@
     font-weight: bold;
     font-size: 64px;
     line-height: 78px;
-    color: #000000;
+    color: var(--bright-font);
 }
 
 .hero_left {
     height: 100%;
     width: 55%;
+    padding: 0.5em;
+    background: rgba(0, 0, 0, 0.58);
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
 }
+.hero_left > p{
+    color:var(--bright-font);
+}
+.slider_frame{
+    top: 3.85em;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    width: 100vw;
+    height: 76vh;
+    position: absolute;
+}
+@keyframes slider_animation {
+    0% {left: 0%;}
+    10% {left: 0%;}
+    20% {left: 100%;}
+    30% {left: 100%;}
+    40% {left: 200%;}
+    50% {left: 200%;}
+    60% {left: 100%;}
+    70% {left: 100%;}
+    80% {left: 0%;}
+    90% {left: 0%;}
+    100% {left: 0%;}
+
+}
+.slider_images{
+    width: 400%;
+    height: 100%;
+    position: relative;
+    margin: 0 0 0 -200%;
+    animation-name: slider_animation;
+    animation-duration: 33s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+.slider_image{
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    float: left;
+}
+
+
+
+
 
 .hero_left > p {
     margin-top: 20px;
@@ -35,7 +86,7 @@
     box-shadow: 4px 4px 5px #00000066;
     width: 380px;
     padding: 10px;
-    background: var(--st-backround);
+    background: var(--bright-font);
 }
 .modalInput>a{
     border-bottom: 1px solid #ccc;
@@ -48,7 +99,8 @@
     height: 100%;
     padding: 10px 20px;
     border: 2px solid var(--btn-color);
-    background: var(--st-backround);
+    box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.462);
+    background: none;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -56,7 +108,7 @@
 .hero_input input {
     width: 100%;
     border: none;
-    background: var(--st-backround);
+    background: none;
     font-size: 16px;
     outline: none;
 }

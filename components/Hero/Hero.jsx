@@ -21,8 +21,18 @@ const Hero = () => {
         dispatch(getProducts(false, false, false, state.replace(/ /gi, "+")));
     };
     return (
-        <div className="container">
+        <div className="container ">
+                <div className={styles.slider_frame}>
+                    <div className={styles.slider_images}>
+                    <div className={styles.slider_image}><Image src={'/barbell.jpg'} alt='barbell' layout="fill"/></div>
+                    <div className={styles.slider_image}><Image src={'/treadmill.jpg'} alt='barbell' layout="fill" /></div>
+                    <div className={styles.slider_image}><Image src={'/lifting.jpg'} alt='barbell' layout="fill" /></div>
+                    <div className={styles.slider_image}><Image src={'/ropes.jpg'} alt='barbell' layout="fill" /></div>
+                    </div>
+
+                </div>
             <section className={styles.hero}>
+
                 <div className={styles.hero_left}>
                     <h1 className={styles.hero_h1}>Спорт товары для всех нужд</h1>
                     <p>Удобный и выгодный магазин для приобретения качественной спорт экипировки</p>
