@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./catalog.module.css";
-
+import { addBasket, basketAction } from "../../redux/action/basketAction";
 import Image from "next/image";
 import Link from "next/link";
 import Last from "../Last/Last";
@@ -8,6 +8,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/action/productsAction";
 
 export const BestCardCatalog = ({ content }) => {
+
+    const { basket } = useSelector((state) => state.basket);
+    const dispatch = useDispatch()
+    function onClickButton(e) {
+        e.preventDefault();
+        addBasket(content.id);
+        dispatch(basketAction());
+    }
     return (
         <div className={styles.best_card}>
             <div className={styles.image_wrapper}>
@@ -26,6 +34,8 @@ export const BestCardCatalog = ({ content }) => {
                 <div className={styles.best_card_name}>{content.name}</div>
             </div>
             <div className={styles.best_card_btn}>подробнее</div>
+
+
         </div>
     );
 };

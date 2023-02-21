@@ -46,6 +46,7 @@
 }
 .nav_list a{
     color: var(--bright-font);
+    font-weight: 600;
 }
 .basket_svg{
 filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(245deg) brightness(103%) contrast(105%);

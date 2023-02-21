@@ -64,7 +64,7 @@ const SubCategory = () => {
                                 key={item.id}
                             >
                                 <a style={{ cursor: "auto" }}>
-                                    <BestCardCatalog content={item} />
+                                    <BestCard content={item} />
                                 </a>
                             </Link>
                         ))

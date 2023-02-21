@@ -52,12 +52,12 @@ const Navbar = () => {
                         <>
                         <li>
                             <Link href="/profile">
-                                <a >профиль</a>
+                                <a >Профиль</a>
                             </Link>
                         </li>
                         <li>
                             <button className={styles.logout_btn} onClick={handleLogout} href="/profile">
-                                <a >выйти</a>
+                                <a >Выйти</a>
                             </button>
                         </li>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
                         </> 
   :                      <li>
                             <Link href="/login">
-                                <a >войти</a>
+                                <a >Войти</a>
                             </Link>
                         </li>  
 
