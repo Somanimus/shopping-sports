@@ -59,8 +59,8 @@ const SubCategory = () => {
                     {
                         products?.results?.map((item) => (
                             <Link
-                                href="/[id]"
-                                as={`/${item.id}`}
+                                href="/catalog/products/[id]"
+                                as={`/catalog/products/${item.id}`}
                                 key={item.id}
                             >
                                 <a style={{ cursor: "auto" }}>

@@ -49,7 +49,7 @@ export const BestCard = ({
     }
 
     return (
-        <Link href={`/[id]`} as={`/${content.id}`} >
+        <Link href={`/catalog/products/[id]`} as={`/catalog/products/${content.id}`} >
             <a className={styles.card_link}>
                 <div className={styles.best_card}>
                     <div className={styles.best_center}>
@@ -114,7 +114,7 @@ const Best = ({ productsHit }) => {
         <div className="gray_bg">
             <div className="container">
 
-                <h2 className="text-center">Лучшие товары</h2>
+                <h2>Лучшие товары</h2>
                 <div className={styles.best_card_wrapper}>
                     {productsHit?.results?.length
                         ? productsHit?.results.map((item, idx) => {

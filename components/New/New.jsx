@@ -17,7 +17,7 @@ const NewCard = ({ newContent }) => {
             {newContent.description}
           </span>
         </div>
-        <Link href={"/[id]"} as={`/${newContent.id}`}>
+        <Link href="/catalog/products/[id]" as={`/catalog/products/${newContent.id}`}>
           <a>
             <div className={styles.new_card_btn}>Подробнее</div>
           </a>
