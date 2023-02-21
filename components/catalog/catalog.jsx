@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/action/productsAction";
 
 export const BestCardCatalog = ({ content }) => {
-    console.log(content)
     return (
         <div className={styles.best_card}>
             <div className={styles.image_wrapper}>
@@ -40,7 +39,6 @@ const Catalog = ({ categories }) => {
         dispatch(getProducts(false, false, productsLastCount))
     }, [productsLastCount, dispatch])
 
-    console.log(categories)
 
     return (
         <div className="gray_bg">

@@ -20,7 +20,6 @@ const SubCategory = () => {
     const { products } = useSelector(state => state.products)
     const dispatch = useDispatch();
     const query = useRouter();
-    console.log(products)
     
     useEffect(() => {
         if (query.query.subcategory) {

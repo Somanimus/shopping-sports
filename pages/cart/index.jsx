@@ -53,6 +53,7 @@ const Card = () => {
         products: prodArray,
       })
       .then((res) => console.log(res))
+      .then()
       .catch((err) => console.log(err));
   };
 
