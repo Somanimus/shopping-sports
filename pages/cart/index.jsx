@@ -5,11 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/action/productsAction";
 import { basketAction, getLocalStorage } from "../../redux/action/basketAction";
 import styles from "./card.module.css";
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
 import { API_URL } from "../../https";
 import axios from "axios";
 
 const Card = () => {
+  const router = useRouter()
   const { products } = useSelector((state) => state.products);
   const { basket } = useSelector((state) => state.basket);
   const [data, setData] = useState({
@@ -53,7 +54,7 @@ const Card = () => {
         products: prodArray,
       })
       .then((res) => console.log(res))
-      .then()
+      .then(() => router.push('/'))
       .catch((err) => console.log(err));
   };
 
