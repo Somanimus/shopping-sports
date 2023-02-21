@@ -73,7 +73,6 @@ filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(245deg) brightness(103%
     width: 24px;
     height: 24px;
     cursor: pointer;
-    background: #00000000;
     display: none;
     align-items: center;
 }
@@ -82,7 +81,7 @@ filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(245deg) brightness(103%
     height: 2px;
     cursor: pointer;
     position: relative;
-    background: var(--txt-bright-color);
+    background: var(--bright-font);
     border-radius: 2px;
 }
 .burger_content::after,
@@ -92,7 +91,7 @@ filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(245deg) brightness(103%
     height: 2px;
     cursor: pointer;
     position: absolute;
-    background: var(--txt-bright-color);
+    background: var(--bright-font);
     border-radius: 2px;
 }
 
@@ -125,7 +124,7 @@ filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(245deg) brightness(103%
         left: 0;
         bottom: 0;
         right: 0;
-        background: #fff;
+        background: var(--gradient);
         z-index: 9999;
         padding: 50px;
     }
@@ -152,7 +151,7 @@ filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(245deg) brightness(103%
         content: "";
         width: 24px;
         height: 2px;
-        background: var(--txt-bright-color);
+        background: var(--bright-font);
         position: absolute;
         top: 45%;
     }

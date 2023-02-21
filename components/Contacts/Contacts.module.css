@@ -2,7 +2,7 @@
 
 .contacts_left{
     margin-top: 60px;
-    color: var(--txt-bright-color);
+    color: var(--bright-font);
 }
 
 .iframe{
@@ -19,7 +19,7 @@
 
 .contacts_right{
     margin-top: 60px;
-    color: var(--txt-bright-color);
+    color: var(--bright-font);
 }
 
 .contacts_h1{

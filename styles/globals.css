@@ -14,12 +14,16 @@ body{
   --st-backround : #c9c7c7;
   --dark-background : #19204E;
   --btn-color: #fcb300;
+  --gradient: linear-gradient(90deg, hsla(348, 81%, 48%, 1) 0%, hsla(224, 51%, 51%, 1) 100%);
 }
 footer{
   background: var(--dark-background);
 }
 .full_screen{
   min-height: 60vh;
+}
+.hundredvh{
+  min-height: 100vh;
 }
 body{
   background:  var(--bright-font);;
@@ -66,7 +70,7 @@ a:hover{
 
 .gray_bg {
   padding: 40px 0;
-  background: linear-gradient(90deg, hsla(348, 81%, 48%, 1) 0%, hsla(224, 51%, 51%, 1) 100%);
+  background: var(--gradient) 
 ;
 }
 .text-center{

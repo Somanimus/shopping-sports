@@ -15,6 +15,7 @@
 .footer_soc > p{
   width: 100%;
   color: var(--bright-font);
+  margin: 0 0.5em;
 } 
 
 @media (max-width: 1024px) {
@@ -27,6 +28,11 @@
 @media (max-width: 770px) {
   .footer {
     grid-template-columns: 100%;
+  
+  }
+  .footer_ul{
+    text-align: center;
+    margin-bottom: 0.85em;
   }
 }
 

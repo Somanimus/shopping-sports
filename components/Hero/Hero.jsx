@@ -21,7 +21,7 @@ const Hero = () => {
         dispatch(getProducts(false, false, false, state.replace(/ /gi, "+")));
     };
     return (
-        <div className="container ">
+        <div className="container">
             <div className={styles.slider_frame}>
                 <div className={styles.slider_images}>
                     <div className={styles.slider_image}>

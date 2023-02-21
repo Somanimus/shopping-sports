@@ -30,7 +30,7 @@
     z-index: -1;
     overflow: hidden;
     width: 100vw;
-    height: 76vh;
+    height: 96vh;
     position: absolute;
 }
 @keyframes slider_animation {
@@ -64,6 +64,7 @@
     position: relative;
     float: left;
 }
+
 
 
 

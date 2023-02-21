@@ -29,7 +29,7 @@ const Card = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProducts(false, false, 0));
+    dispatch(getProducts(false, false, 225));
     dispatch(basketAction());
   }, [dispatch]);
 
