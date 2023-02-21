@@ -65,7 +65,7 @@ const Navbar = () => {
                         </> 
   :                      <li>
                             <Link href="/login">
-                                <a >Войти</a>
+                                <a ></a>
                             </Link>
                         </li>  
 
@@ -121,12 +121,12 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link href="/cart">
-                                <a>магазин</a>
+                                <a>Корзина</a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/register">
-                                <a >регистрация</a>
+                                <a >Регистрация</a>
                             </Link>
                         </li>
                     </ul>
