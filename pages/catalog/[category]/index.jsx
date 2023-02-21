@@ -12,6 +12,7 @@ const Subcategory = () => {
     const { categoriesDetail } = useSelector((state) => state.categories);
     const query = useRouter();
     const dispatch = useDispatch();
+    console.log(categoriesDetail.image)
 
     useEffect(() => {
         if(query.query.category){

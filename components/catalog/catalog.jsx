@@ -8,13 +8,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/action/productsAction";
 
 export const BestCardCatalog = ({ content }) => {
+    console.log(content)
     return (
         <div className={styles.best_card}>
             <div className={styles.image_wrapper}>
                 <Image
                     loader={() => content.image}
-                    src={content.image}
-                    alt=""
+                    src={content?.image ? content?.image : "/barbell.jpg"}
+                    alt={`${content.name}`}
                     width={154}
                     height={156}
                     objectFit="cover"
