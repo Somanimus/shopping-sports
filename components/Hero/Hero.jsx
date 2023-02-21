@@ -22,26 +22,46 @@ const Hero = () => {
     };
     return (
         <div className="container ">
-                <div className={styles.slider_frame}>
-                    <div className={styles.slider_images}>
-                    <div className={styles.slider_image}><Image src={'/barbell.jpg'} alt='barbell' layout="fill"/></div>
-                    <div className={styles.slider_image}><Image src={'/treadmill.jpg'} alt='barbell' layout="fill" /></div>
-                    <div className={styles.slider_image}><Image src={'/lifting.jpg'} alt='barbell' layout="fill" /></div>
-                    <div className={styles.slider_image}><Image src={'/ropes.jpg'} alt='barbell' layout="fill" /></div>
+            <div className={styles.slider_frame}>
+                <div className={styles.slider_images}>
+                    <div className={styles.slider_image}>
+                        <Image
+                            src={"/barbell.jpg"}
+                            alt="barbell"
+                            layout="fill"
+                        />
                     </div>
-
+                    <div className={styles.slider_image}>
+                        <Image
+                            src={"/treadmill.jpg"}
+                            alt="barbell"
+                            layout="fill"
+                        />
+                    </div>
+                    <div className={styles.slider_image}>
+                        <Image
+                            src={"/lifting.jpg"}
+                            alt="barbell"
+                            layout="fill"
+                        />
+                    </div>
+                    <div className={styles.slider_image}>
+                        <Image src={"/ropes.jpg"} alt="barbell" layout="fill" />
+                    </div>
                 </div>
+            </div>
             <section className={styles.hero}>
-
                 <div className={styles.hero_left}>
-                    <h1 className={styles.hero_h1}>Спорт товары для всех нужд</h1>
-                    <p>Удобный и выгодный магазин для приобретения качественной спорт экипировки</p>
+                    <h1 className={styles.hero_h1}>
+                        Спорт товары для всех нужд
+                    </h1>
+                    <p>
+                        Удобный и выгодный магазин для приобретения качественной
+                        спорт экипировки
+                    </p>
                     <div className={styles.input_wrapper}>
                         <label className={styles.hero_input}>
-                            <input
-                                type="text"
-                                onChange={onChangeValue}
-                            />
+                            <input type="text" onChange={onChangeValue} />
                             <svg
                                 fill="#000000"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +82,8 @@ const Hero = () => {
                                         (item, idx) => {
                                             return (
                                                 <Link
-                                                    href="/[id]"
-                                                    as={`/${item.id}`}
+                                                    href="/catalog/products/[id]"
+                                                    as={`/catalog/products/${item.id}`}
                                                     key={item.id}
                                                 >
                                                     <a>
@@ -85,8 +105,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className={styles.hero_right}>
-               </div>
+                <div className={styles.hero_right}></div>
             </section>
         </div>
     );
