@@ -20,7 +20,7 @@ const SubCategory = () => {
     const { products } = useSelector(state => state.products)
     const dispatch = useDispatch();
     const query = useRouter();
-    console.log(products)
+    
     useEffect(() => {
         if (query.query.subcategory) {
             dispatch(getSubCategoriesDetail(+query.query.subcategory));
@@ -57,7 +57,7 @@ const SubCategory = () => {
             <div className="container">
                 <div className={styles.best_card_wrapper}>
                     {
-                        products?.results?.filter(item => item.subcategory === subCategoriesDetail.name).map((item) => (
+                        products?.results?.map((item) => (
                             <Link
                                 href="/[id]"
                                 as={`/${item.id}`}
@@ -71,7 +71,7 @@ const SubCategory = () => {
                     }
                 </div>
             </div>
-            <div className="container">
+            {/* <div className="container">
                 <h3 className={styles.h3}>Все категорий</h3>
                 <div className={styles.best_card_wrapper}>
                     {subCategories?.map((item) => (
@@ -86,7 +86,7 @@ const SubCategory = () => {
                         </Link>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </Layout>
     );
 };

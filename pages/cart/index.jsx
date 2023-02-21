@@ -42,7 +42,7 @@ const Card = () => {
         amount: 1,
       });
     }
-    console.log(prodArray);
+    // console.log(prodArray);
     await axios
       .post(`${API_URL}/order/`, {
         email: data.email,
