@@ -3,14 +3,12 @@ import Layout from "../../components/Layout/Layout";
 import { BestCard } from "../../components/Best/Best";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/action/productsAction";
-import { basketAction, getLocalStorage } from "../../redux/action/basketAction";
+import { basketAction, } from "../../redux/action/basketAction";
 import styles from "./card.module.css";
-import Router, { useRouter } from "next/router";
-import { API_URL } from "../../https";
-import axios from "axios";
+import  { useRouter } from "next/router";
 
 const Card = () => {
-  const router = useRouter()
+  const router = useRouter();
   const { products } = useSelector((state) => state.products);
   const { basket } = useSelector((state) => state.basket);
   const [data, setData] = useState({
@@ -19,14 +17,14 @@ const Card = () => {
     full_name: "",
     phone: "",
   });
-          const handleChange = e => {
-            const { name, value } = e.target;
-            setData(prevState => ({
-                ...prevState,
-                [name]: value
-            }));
-        };
- 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -44,18 +42,23 @@ const Card = () => {
       });
     }
     // console.log(prodArray);
-    await axios
-      .post(`${API_URL}/order/`, {
-        email: data.email,
-        addres: data.addres,
-        full_name: data.full_name,
-        phone: data.phone,
-        ordered: true,
-        products: prodArray,
-      })
-      .then((res) => console.log(res))
-      .then(() => router.push('/'))
-      .catch((err) => console.log(err));
+    if (typeof window !== "undefined" ){
+
+      localStorage.setItem(
+        "order",
+        JSON.stringify({
+          email: data.email,
+          addres: data.addres,
+          full_name: data.full_name,
+          phone: data.phone,
+          ordered: true,
+          products: prodArray,
+        })
+      )
+      router.push('/checkout')
+      localStorage.removeItem("product-basket")
+
+    }
   };
 
   return (
@@ -94,9 +97,13 @@ const Card = () => {
             </label>
             <label>
               <span>Email *</span>
-              <input type="email" required name="email"
-              value={data.email}
-              onChange={e=>handleChange(e)} />
+              <input
+                type="email"
+                required
+                name="email"
+                value={data.email}
+                onChange={(e) => handleChange(e)}
+              />
             </label>
             <label>
               <span>Телефон *</span>
@@ -106,14 +113,18 @@ const Card = () => {
                 placeholder="+996-XXX-XXX-XXX"
                 name="phone"
                 value={data.phone}
-                onChange={e=>handleChange(e)}
+                onChange={(e) => handleChange(e)}
               />
             </label>
             <label>
               <span>Адрес *</span>
-              <input type="text" required name="addres"
-              value={data.addres}
-              onChange={e=> handleChange(e)} />
+              <input
+                type="text"
+                required
+                name="addres"
+                value={data.addres}
+                onChange={(e) => handleChange(e)}
+              />
             </label>
           </div>
           <button type="submit">заказать</button>

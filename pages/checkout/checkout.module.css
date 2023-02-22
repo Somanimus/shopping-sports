@@ -1,6 +1,6 @@
 .container{
     min-width: 300px;
-    width: 50%;
+    width: 35%;
     border: 1px solid var(--dark-background);
     box-sizing: border-box;
     padding: 1em;
@@ -8,18 +8,33 @@
     border-radius: 5px;
     background-color: white;
     margin: auto;
-    justify-content: space-around;
     margin-top: 2em;
     margin-bottom: 2em;
-    display: flex;
-    height: 20em;
-    flex-direction: column;
+    min-height: 30em;
 }
 .order_info{
-    height: 50%;
+    margin-top: 3em;
+    margin-bottom: 10em;
+    height: 40%;
     display: flex;
     justify-content: space-between;
     flex-direction:column ;
+}
+.cash_order_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.order_button{
+ min-width: 15ch;
+ font-size: 1.2em;
+ height: 2em;
+margin: auto;
+}
+.order_text{
+    margin-bottom: 1em;
+
 }
 .form{
     display: grid;
@@ -40,4 +55,8 @@
 .input{
     box-sizing: border-box;
     padding-left: 1em;
+}
+.select{
+    margin-top: 1em;
+    width: 20ch;
 }
